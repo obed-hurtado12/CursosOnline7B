@@ -59,7 +59,7 @@ export default function AuthNavbar(props) {
         bg='linear-gradient(97.89deg, #FFFFFF 70.67%, rgba(117, 122, 140, 0) 108.55%)'
         bgClip='text'>
         <Text fontSize='sm' letterSpacing='3px' mt='3px' color='transparent'>
-          {logoText}kkk
+          Cursos en Línea
         </Text>
       </Box>
     </Link>
@@ -91,7 +91,7 @@ export default function AuthNavbar(props) {
           leftIcon={
             <PersonIcon color={navbarIcon} w='12px' h='12px' me='0px' />
           }>
-          <Text>Profile</Text>
+          <Text>Perfil</Text>
         </Button>
       </NavLink>
       <NavLink to='/auth/signup'>
@@ -106,7 +106,7 @@ export default function AuthNavbar(props) {
           leftIcon={
             <RocketIcon color={navbarIcon} w='12px' h='12px' me='0px' />
           }>
-          <Text>Sign Up</Text>
+          <Text>Registrarse</Text>
         </Button>
       </NavLink>
       <NavLink to='/auth/signin'>
@@ -120,7 +120,7 @@ export default function AuthNavbar(props) {
           leftIcon={
             <DocumentIcon color={navbarIcon} w='12px' h='12px' me='0px' />
           }>
-          <Text>Sign In</Text>
+          <Text>Iniciar Sesión</Text>
         </Button>
       </NavLink>
     </HStack>
@@ -158,7 +158,7 @@ export default function AuthNavbar(props) {
           />
         </Box>
         {linksAuth}
-        <Link href='https://creative-tim.com/product/vision-ui-dashboard-chakra'>
+        {/* <Link href='https://creative-tim.com/product/vision-ui-dashboard-chakra'>
           <Button
             fontSize='xs'
             variant='brand'
@@ -170,7 +170,7 @@ export default function AuthNavbar(props) {
             }}>
             Free Download
           </Button>
-        </Link>
+        </Link> */}
       </Flex>
     </Flex>
   );

@@ -66,7 +66,7 @@ var dashRoutes = [
       },
       {
         path: "/signin",
-        name: "Sign In",
+        name: "Iniciar Sesión",
         rtlName: "لوحة القيادة",
         icon: <DocumentIcon color='inherit' />,
         component: SignIn,
@@ -74,7 +74,7 @@ var dashRoutes = [
       },
       {
         path: "/signup",
-        name: "Sign Up",
+        name: "Registrarse",
         rtlName: "لوحة القيادة",
         icon: <RocketIcon color='inherit' />,
         secondaryNavbar: true,
