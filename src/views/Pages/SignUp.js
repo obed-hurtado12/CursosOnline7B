@@ -22,7 +22,8 @@ import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
 import AuthFooter from "components/Footer/AuthFooter";
 import GradientBorder from "components/GradientBorder/GradientBorder";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 // Assets
 import signUpImage from "assets/img/signUpImage.png";
@@ -32,6 +33,12 @@ import fondo from "../../assets/img/Fondos/background1.png"
 function SignUp() {
   const titleColor = "white";
   const textColor = "gray.400";
+
+  const history = useHistory();
+
+  const handleRoute = () => {
+    history.push("/admin/landing");
+  };
 
   return (
     <>
@@ -308,6 +315,8 @@ function SignUp() {
                     h="45"
                     mb="20px"
                     mt="20px"
+                    to='/admin/landing'
+                    onClick={handleRoute}
                   >
                     Registrarse
                   </Button>
@@ -320,7 +329,7 @@ function SignUp() {
                   mt="0px"
                 >
                   <Text color={textColor} fontWeight="medium">
-                    ¿Ya tienes una cuenta?
+                    <i>¿Ya tienes una cuenta? </i> {" "}
                     <NavLink
                       color={titleColor}
                       as="span"
@@ -328,7 +337,7 @@ function SignUp() {
                       to='/auth/signin'
                       fontWeight="bold"
                     >
-                      Inicia Sesión
+                      <strong>Inicia Sesión</strong>
                     </NavLink>
                   </Text>
                 </Flex>
