@@ -5,7 +5,8 @@ import { Box, Button, Flex, Grid, Icon, Spacer, Text } from "@chakra-ui/react";
 
 // Images
 import BackgroundCard1 from "assets/img/billing-background-card.png";
-
+import Banco1 from "../../assets/img/Fondos/Banco1.jpg"
+import Banco2 from "../../assets/img/Fondos/Banco2.png"
 // Custom components
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
@@ -132,7 +133,7 @@ function Billing() {
               </Flex>
               <Flex direction="column">
                 <Card
-                  backgroundImage={BackgroundCard1}
+                  backgroundImage={Banco1}
                   backgroundRepeat="no-repeat"
                   bgSize="cover"
                   bgPosition="10%"
@@ -194,7 +195,7 @@ function Billing() {
 
               <Flex direction="column">
                 <Card
-                  backgroundImage={BackgroundCard1}
+                  backgroundImage={Banco2}
                   backgroundRepeat="no-repeat"
                   bgSize="cover"
                   bgPosition="10%"
@@ -356,7 +357,7 @@ function Billing() {
                   Total de compra:
                 </Text>
                 <Text color="#fff" fontWeight="bold" fontSize="34px">
-                  $25,215
+                  $1,810
                 </Text>
               </Flex>
               <Flex direction="column">
