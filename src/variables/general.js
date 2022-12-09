@@ -289,38 +289,40 @@ export const tablesProjectData = [
   },
 ];
 
+
+//RESUMEN DE COMPRA
 export const invoicesData = [
   {
-    date: "March, 01, 2020",
-    code: "#MS-415646",
-    price: "$180",
+    date: "Curso JavaScript",
+    code: "Código Curso: #MS-415646",
+    price: "$280",
     logo: FaFilePdf,
     format: "PDF",
   },
   {
-    date: "February, 10, 2020",
-    code: "#RV-126749",
+    date: "Curso Figma",
+    code: "Código Curso: #RV-126749",
     price: "$250",
     logo: FaFilePdf,
     format: "PDF",
   },
   {
-    date: "April, 05, 2020",
-    code: "#FB-212562",
+    date: "Angular JS",
+    code: "Código Curso: #FB-212562",
     price: "$560",
     logo: FaFilePdf,
     format: "PDF",
   },
   {
-    date: "June, 25, 2019",
-    code: "#QW-103578",
-    price: "$120",
+    date: "WordPress",
+    code: "Código Curso: #QW-103578",
+    price: "$420",
     logo: FaFilePdf,
     format: "PDF",
   },
   {
-    date: "March, 01, 2019",
-    code: "#AR-803481",
+    date: "HTML5 y CSS",
+    code: "Código Curso: #AR-803481",
     price: "$300",
     logo: FaFilePdf,
     format: "PDF",
@@ -329,9 +331,9 @@ export const invoicesData = [
 
 export const billingData = [
   {
-    name: "Oliver Liam",
-    company: "Viking Burrito",
-    email: "oliver@burrito.com",
+    name: "Fernando Herrera",
+    company: "Curso React JS",
+    email: "fernandoherrera@gmail.com",
     number: "FRB1235476",
   },
   {
