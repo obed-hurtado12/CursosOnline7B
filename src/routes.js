@@ -1,6 +1,6 @@
 import Dashboard from "views/Dashboard/Dashboard.js";
 import Tables from "views/Dashboard/Tables.js";
-import Billing from "views/Dashboard/Billing.js";
+import Billing from "views/Dashboard/Chat.js";
 import RTLPage from "views/RTL/RTLPage.js";
 import Profile from "views/Dashboard/Profile.js";
 import SignIn from "views/Pages/SignIn.js";
@@ -34,8 +34,8 @@ var dashRoutes = [
     layout: "/admin",
   },
   {
-    path: "/billing",
-    name: "Billing",
+    path: "/chat",
+    name: "Chat",
     rtlName: "لوحة القيادة",
     icon: <CreditIcon color='inherit' />,
     component: Billing,
@@ -66,7 +66,7 @@ var dashRoutes = [
       },
       {
         path: "/signin",
-        name: "Sign In",
+        name: "Iniciar Sesión",
         rtlName: "لوحة القيادة",
         icon: <DocumentIcon color='inherit' />,
         component: SignIn,
@@ -74,7 +74,7 @@ var dashRoutes = [
       },
       {
         path: "/signup",
-        name: "Sign Up",
+        name: "Registrarse",
         rtlName: "لوحة القيادة",
         icon: <RocketIcon color='inherit' />,
         secondaryNavbar: true,
