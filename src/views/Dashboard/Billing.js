@@ -88,7 +88,7 @@ function Billing() {
                     >
                       <Flex justify="space-between" align="center">
                         <Text fontSize="md" fontWeight="bold">
-                          BanCoppel
+                          Banamex
                         </Text>
                         <Icon
                           as={RiMastercardFill}
@@ -149,7 +149,7 @@ function Billing() {
                     >
                       <Flex justify="space-between" align="center">
                         <Text fontSize="md" fontWeight="bold">
-                          BanCoppel
+                          Banorte
                         </Text>
                         <Icon
                           as={RiMastercardFill}
