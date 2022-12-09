@@ -35,7 +35,7 @@ var dashRoutes = [
   },
   {
     path: "/billing",
-    name: "Billing",
+    name: "Vista de Pago",
     rtlName: "لوحة القيادة",
     icon: <CreditIcon color='inherit' />,
     component: Billing,
@@ -57,7 +57,7 @@ var dashRoutes = [
     views: [
       {
         path: "/profile",
-        name: "Profile",
+        name: "Perfil",
         rtlName: "لوحة القيادة",
         icon: <PersonIcon color='inherit' />,
         secondaryNavbar: true,
