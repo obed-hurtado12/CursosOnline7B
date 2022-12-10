@@ -192,7 +192,6 @@ function Billing() {
                   </CardBody>
                 </Card>
               </Flex>
-
               <Flex direction="column">
                 <Card
                   backgroundImage={Banco2}
