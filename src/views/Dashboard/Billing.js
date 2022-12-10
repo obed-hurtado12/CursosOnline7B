@@ -5,8 +5,8 @@ import { Box, Button, Flex, Grid, Icon, Spacer, Text } from "@chakra-ui/react";
 
 // Images
 import BackgroundCard1 from "assets/img/billing-background-card.png";
-import Banco1 from "../../assets/img/Fondos/Banco1.jpg"
-import Banco2 from "../../assets/img/Fondos/Banco2.png"
+import Banco1 from "../../assets/img/Fondos/Banco1.jpg";
+import Banco2 from "../../assets/img/Fondos/Banco2.png";
 // Custom components
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";

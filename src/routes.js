@@ -5,6 +5,7 @@ import RTLPage from "views/RTL/RTLPage.js";
 import Profile from "views/Dashboard/Profile.js";
 import SignIn from "views/Pages/SignIn.js";
 import SignUp from "views/Pages/SignUp.js";
+import ShoppingCart from "views/Dashboard/ShoppingCart.js"
 
 import {
   HomeIcon,
@@ -23,6 +24,14 @@ var dashRoutes = [
     rtlName: "لوحة القيادة",
     icon: <HomeIcon color='inherit' />,
     component: Dashboard,
+    layout: "/admin",
+  },
+  {
+    path: "/shoppingcart",
+    name: "ShoppingCart",
+    rtlName: "لوحة القيادة",
+    icon: <HomeIcon color='inherit' />,
+    component: ShoppingCart,
     layout: "/admin",
   },
   {
