@@ -83,7 +83,7 @@ export default function Dashboard() {
 							</IconBox>
 						</Flex>
 					</CardBody>
-				</Card>
+				</Card> 
 				{/* MiniStatistics Card */}
 				<Card minH='83px'>
 					<CardBody>

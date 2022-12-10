@@ -23,6 +23,8 @@ import {
 } from "@chakra-ui/react";
 import medusa from "assets/img/cardimgfree.png";
 import medBg from "../../assets/img/avatars/avatar7.png";
+import Banco2 from "../../assets/img/Fondos/Banco1.jpg";
+
 // Custom components
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
@@ -30,6 +32,7 @@ import CardHeader from "components/Card/CardHeader.js";
 import BarChart from "components/Charts/BarChart";
 import LineChart from "components/Charts/LineChart";
 import IconBox from "components/Icons/IconBox";
+
 // Custom icons
 import {
   CartIcon,
@@ -39,6 +42,8 @@ import {
   StatsIcon,
   WalletIcon,
 } from "components/Icons/Icons.js";
+import { RiMastercardFill } from "react-icons/ri";
+
 // Tables
 import DashboardTableRow from "components/Tables/DashboardTableRow";
 import TimelineRow from "components/Tables/TimelineRow";
@@ -140,124 +145,27 @@ export default function Dashboard() {
           </CardBody>
         </Card> */}
 
-        {/* Referral Tracking */}
-		{/* md: "2 / 2 / 3 / 3",  gridArea={{  "2xl": "auto" }}*/}
         <Card>
-          <Flex direction="column">
+          {/* <Flex direction="column">
             <Flex justify="space-between" align="center" mb="40px">
-			<img src={medBg} style={{height:"200px", width:"200px", borderRadius:"20%"}}></img>
-
-              <Text color="#fff" fontSize="lg" fontWeight="bold">
-                Información
-              </Text>
+              <img
+                src={medBg}
+                style={{ height: "200px", width: "200px", borderRadius: "20%" }}
+              ></img>
               <Button
                 borderRadius="12px"
-                w="38px"
+                w="300px"
                 h="38px"
                 bg="#22234B"
                 _hover="none"
                 _active="none"
               >
-                <Icon as={IoEllipsisHorizontal} color="#7551FF" />
-              </Button>
-
-            </Flex>
-            <Flex direction={{ sm: "column", md: "row" }}>
-              <Flex
-                direction="column"
-                me={{ md: "6px", lg: "52px" }}
-                mb={{ sm: "16px", md: "0px" }}
-              >
-                <Flex
-                  direction="column"
-                  p="22px"
-                  pe={{ sm: "22e", md: "8px", lg: "22px" }}
-                  minW={{ sm: "220px", md: "140px", lg: "220px" }}
-                  bg="linear-gradient(126.97deg, #060C29 28.26%, rgba(4, 12, 48, 0.5) 91.2%)"
-                  borderRadius="20px"
-                  mb="20px"
-                >
-                  <Text color="gray.400" fontSize="sm" mb="4px">
-                    Invited
-                  </Text>
-                  <Text color="#fff" fontSize="lg" fontWeight="bold">
-                    145 people
-                  </Text>
-                </Flex>
-                <Flex
-                  direction="column"
-                  p="22px"
-                  pe={{ sm: "22px", md: "8px", lg: "22px" }}
-                  minW={{ sm: "170px", md: "140px", lg: "170px" }}
-                  bg="linear-gradient(126.97deg, #060C29 28.26%, rgba(4, 12, 48, 0.5) 91.2%)"
-                  borderRadius="20px"
-                >
-                  <Text color="gray.400" fontSize="sm" mb="4px">
-                    Bonus
-                  </Text>
-                  <Text color="#fff" fontSize="lg" fontWeight="bold">
-                    1,465
-                  </Text>
-                </Flex>
-              </Flex>
-
-              <Box mx={{ sm: "auto", md: "0px" }}>
-                {/* <CircularProgress
-                  size={
-                    window.innerWidth >= 1024
-                      ? 200
-                      : window.innerWidth >= 768
-                      ? 170
-                      : 200
-                  }
-                  value={70}
-                  thickness={6}
-                  color="#05CD99"
-                  variant="vision"
-                >
-                  <CircularProgressLabel>
-                    <Flex direction="column" justify="center" align="center">
-                      <Text color="gray.400" fontSize="sm">
-                        Safety
-                      </Text>
-                      <Text
-                        color="#fff"
-                        fontSize={{ md: "36px", lg: "50px" }}
-                        fontWeight="bold"
-                        mb="4px"
-                      >
-                        9.3
-                      </Text>
-                      <Text color="gray.400" fontSize="sm">
-                        Total Score
-                      </Text>
-                    </Flex>
-                  </CircularProgressLabel>
-                </CircularProgress> */}
-              </Box>
-            </Flex>
-          </Flex>
-        </Card>
-
-		<Card>
-          <Flex direction="column">
-            <Flex justify="space-between" align="center" mb="40px">
-			<img src={medBg} style={{height:"200px", width:"200px", borderRadius:"20%"}}></img>
-
-              <Text color="#fff" fontSize="lg" fontWeight="bold">
-                Información
+				<Text color="#fff" fontSize="lg" fontWeight="bold">
+                Información Personal
               </Text>
-              <Button
-                borderRadius="12px"
-                w="38px"
-                h="38px"
-                bg="#22234B"
-                _hover="none"
-                _active="none"
-              >
+			  {" -"}
                 <Icon as={IoEllipsisHorizontal} color="#7551FF" />
               </Button>
-
             </Flex>
             <Flex direction={{ sm: "column", md: "row" }}>
               <Flex
@@ -281,6 +189,7 @@ export default function Dashboard() {
                     José Manuel Salgado Salgado
                   </Text>
                 </Flex>
+
 				<Flex
                   direction="column"
                   p="22px"
@@ -291,12 +200,13 @@ export default function Dashboard() {
                   mb="20px"
                 >
                   <Text color="gray.400" fontSize="sm" mb="4px">
-                    Nombre:
+                    Email:
                   </Text>
                   <Text color="#fff" fontSize="lg" fontWeight="bold">
-                    José Manuel Salgado Salgado
+                    josesalg@utez.edu.mx
                   </Text>
                 </Flex>
+
                 <Flex
                   direction="column"
                   p="22px"
@@ -306,251 +216,253 @@ export default function Dashboard() {
                   borderRadius="20px"
                 >
                   <Text color="gray.400" fontSize="sm" mb="4px">
-                    Bonus
+                    Telefono:
                   </Text>
                   <Text color="#fff" fontSize="lg" fontWeight="bold">
-                    1,465
+                    7771305580
                   </Text>
                 </Flex>
+              </Flex>
+            </Flex>
+			
+          </Flex> */}
+          <Card>
+            <div className="text-center">
+              <Button
+                borderRadius="12px"
+                w="300px"
+                h="42px"
+                bg="#22234B"
+                _hover="none"
+                _active="none"
+              >
+                <Text color="#fff" fontSize="lg" fontWeight="bold">
+                  Información Personal
+                </Text>
+                {" -"}
+                <Icon as={IoEllipsisHorizontal} color="#7551FF" />
+              </Button>
+            </div>
+
+            <Flex direction="column">
+              <Flex justify="space-between" align="center" mb="40px">
+                <Flex
+                  direction="column"
+                  me={{ md: "6px", lg: "52px" }}
+                  mb={{ sm: "16px", md: "0px" }}
+                >
+                  <Flex
+                    direction="column"
+                    p="22px"
+                    pe={{ sm: "22e", md: "8px", lg: "22px" }}
+                    minW={{ sm: "220px", md: "140px", lg: "220px" }}
+                    bg="linear-gradient(126.97deg, #060C29 28.26%, rgba(4, 12, 48, 0.5) 91.2%)"
+                    borderRadius="20px"
+                    mb="20px"
+                  >
+					 <Text color="gray.400" fontSize="sm" mb="4px">
+                      Nombre:
+                    </Text>
+                    <Text color="#fff" fontSize="lg" fontWeight="bold">
+                      José Manuel Salgado Salgado
+                    </Text>
+					<br/>
+                    <Text color="gray.400" fontSize="sm" mb="4px">
+                      Email:
+                    </Text>
+                    <Text color="#fff" fontSize="lg" fontWeight="bold">
+                      joseManuel@utez.edu.mx
+                    </Text>
+					<br/>
+					<Text color="gray.400" fontSize="sm" mb="4px">
+                      Telefono:
+                    </Text>
+                    <Text color="#fff" fontSize="lg" fontWeight="bold">
+                      7771305580
+                    </Text>
+					<br/>
+					<Text color="gray.400" fontSize="sm" mb="4px">
+                      Dirección:
+                    </Text>
+                    <Text color="#fff" fontSize="lg" fontWeight="bold">
+                      Laurel #1, Col. <i><strong>"La Rivera"</strong></i> Acatlipa, Temixco, Morelos.
+                    </Text>
+					
+                  </Flex>
+
+                  
+                </Flex>
+                <img
+                  src={medBg}
+                  style={{
+                    height: "220px",
+                    width: "220px",
+                    borderRadius: "20%",
+                  }}
+                ></img>
+              </Flex>
+            </Flex>
+          </Card>
+		 
+        </Card>
+
+        {/* INFORMACIÓN DE CUENTA BANCARIA */}
+        <Card>
+          <Flex direction="column">
+            <Flex justify="space-between" align="center" mb="40px">
+              <Button
+                borderRadius="12px"
+                w="400px"
+                h="42px"
+                bg="#22234B"
+                _hover="none"
+                _active="none"
+              >
+                <Text color="#fff" fontSize="lg" fontWeight="bold">
+                  Información de Cuenta Bancaria
+                </Text>
+                {" -"}
+                <Icon as={IoEllipsisHorizontal} color="#7551FF" />
+              </Button>
+            </Flex>
+            {/* MASTERCARD */}
+            <Flex direction="column">
+              <Card
+                backgroundImage={Banco2}
+                backgroundRepeat="no-repeat"
+                bgSize="cover"
+                bgPosition="10%"
+                p="16px"
+              >
+                <CardBody h="100%" w="100%">
+                  <Flex
+                    direction="column"
+                    color="white"
+                    h="100%"
+                    p="0px 10px 20px 10px"
+                    w="100%"
+                  >
+                    <Flex justify="space-between" align="center">
+                      <Text fontSize="md" fontWeight="bold">
+                        Banorte
+                      </Text>
+                      <Icon
+                        as={RiMastercardFill}
+                        w="48px"
+                        h="auto"
+                        color="gray.400"
+                      />
+                    </Flex>
+                    <Spacer />
+                    <Text fontSize="md" fontWeight="bold">
+                      José Manuel Salgado Salgado
+                    </Text>
+                    <br />
+                    <Flex direction="column">
+                      <Box>
+                        <Text
+                          fontSize={{ sm: "xl", lg: "lg", xl: "xl" }}
+                          letterSpacing="2px"
+                          fontWeight="bold"
+                        >
+                          4169 1607 1080 0336
+                        </Text>
+                      </Box>
+                      <Flex mt="14px">
+                        <Flex direction="column" me="34px">
+                          <Text fontSize="xs">GOOD THRU</Text>
+                          <Text fontSize="xs" fontWeight="bold">
+                            11/25
+                          </Text>
+                        </Flex>
+                        <Flex direction="column">
+                          <Text fontSize="xs">CVV</Text>
+                          <Text fontSize="xs" fontWeight="bold">
+                            815
+                          </Text>
+                        </Flex>
+                      </Flex>
+                    </Flex>
+                  </Flex>
+                </CardBody>
+              </Card>
+            </Flex>
+            <br />
+            <Flex
+              direction="column"
+              p="22px"
+              pe={{ sm: "22e", md: "8px", lg: "22px" }}
+              minW={{ sm: "220px", md: "140px", lg: "220px" }}
+              bg="linear-gradient(126.97deg, #060C29 28.26%, rgba(4, 12, 48, 0.5) 91.2%)"
+              borderRadius="20px"
+              mb="20px"
+            >
+              <Text color="gray.400" fontSize="sm" mb="4px">
+                CLABE INTERBANCARIA:
+              </Text>
+              <Text color="#fff" fontSize="lg" fontWeight="bold">
+                XXXX {" - "}XXXX {" - "}XXXX {" - "}XXXX
+              </Text>
+            </Flex>
+            <Flex direction={{ sm: "column", md: "row" }}>
+              <Flex
+                direction="column"
+                me={{ md: "6px", lg: "52px" }}
+                mb={{ sm: "16px", md: "0px" }}
+              >
+                {/* SALDO ACTUAL */}
+                <Card>
+                  <CardBody>
+                    <Flex
+                      flexDirection="row"
+                      align="center"
+                      justify="center"
+                      w="100%"
+                    >
+                      <Stat me="auto">
+                        <StatLabel
+                          fontSize="sm"
+                          color="gray.400"
+                          fontWeight="bold"
+                          pb="2px"
+                        >
+                          Saldo Actual:
+                        </StatLabel>
+                        <Flex>
+                          <StatNumber fontSize="lg" color="#fff">
+                            $5,500
+                          </StatNumber>
+                          <StatHelpText
+                            alignSelf="flex-end"
+                            justifySelf="flex-end"
+                            m="0px"
+                            color="green.400"
+                            fontWeight="bold"
+                            ps="3px"
+                            fontSize="md"
+                          >
+                            +55%
+                          </StatHelpText>
+                        </Flex>
+                      </Stat>
+                      <IconBox as="box" h={"40px"} w={"40px"} bg="brand.200">
+                        <WalletIcon h={"24px"} w={"24px"} color="#fff" />
+                      </IconBox>
+                    </Flex>
+                  </CardBody>
+                </Card>
               </Flex>
             </Flex>
           </Flex>
         </Card>
       </Grid>
+
       <Grid
         templateColumns={{ sm: "1fr", lg: "1.7fr 1.3fr" }}
         maxW={{ sm: "350px", md: "100%" }}
         gap="24px"
         mb="24px"
-      >
-        {/* Sales Overview */}
-        {/* <Card p='28px 0px 0px 0px'>
-					<CardHeader mb='20px' ps='22px'>
-						<Flex direction='column' alignSelf='flex-start'>
-							<Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-								Sales Overview
-							</Text>
-							<Text fontSize='md' fontWeight='medium' color='gray.400'>
-								<Text as='span' color='green.400' fontWeight='bold'>
-									(+5%) more
-								</Text>{' '}
-								in 2021
-							</Text>
-						</Flex>
-					</CardHeader>
-					<Box w='100%' minH={{ sm: '300px' }}>
-						<LineChart
-							lineChartData={lineChartDataDashboard}
-							lineChartOptions={lineChartOptionsDashboard}
-						/>
-					</Box>
-				</Card> */}
-
-        {/* Active Users */}
-        {/* <Card p='16px'>
-					<CardBody>
-						<Flex direction='column' w='100%'>
-							<Box
-								bg='linear-gradient(126.97deg, #060C29 28.26%, rgba(4, 12, 48, 0.5) 91.2%)'
-								borderRadius='20px'
-								display={{ sm: 'flex', md: 'block' }}
-								justify={{ sm: 'center', md: 'flex-start' }}
-								align={{ sm: 'center', md: 'flex-start' }}
-								minH={{ sm: '180px', md: '220px' }}
-								p={{ sm: '0px', md: '22px' }}>
-								<BarChart
-									barChartOptions={barChartOptionsDashboard}
-									barChartData={barChartDataDashboard}
-								/>
-							</Box>
-							<Flex direction='column' mt='24px' mb='36px' alignSelf='flex-start'>
-								<Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-									Active Users
-								</Text>
-								<Text fontSize='md' fontWeight='medium' color='gray.400'>
-									<Text as='span' color='green.400' fontWeight='bold'>
-										(+23%)
-									</Text>{' '}
-									than last week
-								</Text>
-							</Flex>
-							<SimpleGrid gap={{ sm: '12px' }} columns={4}>
-								<Flex direction='column'>
-									<Flex alignItems='center'>
-										<IconBox as='box' h={'30px'} w={'30px'} bg='brand.200' me='6px'>
-											<WalletIcon h={'15px'} w={'15px'} color='#fff' />
-										</IconBox>
-										<Text fontSize='sm' color='gray.400'>
-											Users
-										</Text>
-									</Flex>
-									<Text
-										fontSize={{ sm: 'md', lg: 'lg' }}
-										color='#fff'
-										fontWeight='bold'
-										mb='6px'
-										my='6px'>
-										32,984
-									</Text>
-									<Progress colorScheme='brand' bg='#2D2E5F' borderRadius='30px' h='5px' value={20} />
-								</Flex>
-								<Flex direction='column'>
-									<Flex alignItems='center'>
-										<IconBox as='box' h={'30px'} w={'30px'} bg='brand.200' me='6px'>
-											<RocketIcon h={'15px'} w={'15px'} color='#fff' />
-										</IconBox>
-										<Text fontSize='sm' color='gray.400'>
-											Clicks
-										</Text>
-									</Flex>
-									<Text
-										fontSize={{ sm: 'md', lg: 'lg' }}
-										color='#fff'
-										fontWeight='bold'
-										mb='6px'
-										my='6px'>
-										2.42m
-									</Text>
-									<Progress colorScheme='brand' bg='#2D2E5F' borderRadius='30px' h='5px' value={90} />
-								</Flex>
-								<Flex direction='column'>
-									<Flex alignItems='center'>
-										<IconBox as='box' h={'30px'} w={'30px'} bg='brand.200' me='6px'>
-											<CartIcon h={'15px'} w={'15px'} color='#fff' />
-										</IconBox>
-										<Text fontSize='sm' color='gray.400'>
-											Sales
-										</Text>
-									</Flex>
-									<Text
-										fontSize={{ sm: 'md', lg: 'lg' }}
-										color='#fff'
-										fontWeight='bold'
-										mb='6px'
-										my='6px'>
-										2,400$
-									</Text>
-									<Progress colorScheme='brand' bg='#2D2E5F' borderRadius='30px' h='5px' value={30} />
-								</Flex>
-								<Flex direction='column'>
-									<Flex alignItems='center'>
-										<IconBox as='box' h={'30px'} w={'30px'} bg='brand.200' me='6px'>
-											<StatsIcon h={'15px'} w={'15px'} color='#fff' />
-										</IconBox>
-										<Text fontSize='sm' color='gray.400'>
-											Items
-										</Text>
-									</Flex>
-									<Text
-										fontSize={{ sm: 'md', lg: 'lg' }}
-										color='#fff'
-										fontWeight='bold'
-										mb='6px'
-										my='6px'>
-										320
-									</Text>
-									<Progress colorScheme='brand' bg='#2D2E5F' borderRadius='30px' h='5px' value={50} />
-								</Flex>
-							</SimpleGrid>
-						</Flex>
-					</CardBody>
-				</Card> */}
-      </Grid>
-
-      {/* <Grid templateColumns={{ sm: '1fr', md: '1fr 1fr', lg: '2fr 1fr' }} gap='24px'> */}
-
-      {/* Projects */}
-      {/* <Card p='16px' overflowX={{ sm: 'scroll', xl: 'hidden' }}>
-					<CardHeader p='12px 0px 28px 0px'>
-						<Flex direction='column'>
-							<Text fontSize='lg' color='#fff' fontWeight='bold' pb='8px'>
-								Projects
-							</Text>
-							<Flex align='center'>
-								<Icon as={IoCheckmarkDoneCircleSharp} color='teal.300' w={4} h={4} pe='3px' />
-								<Text fontSize='sm' color='gray.400' fontWeight='normal'>
-									<Text fontWeight='bold' as='span'>
-										30 done
-									</Text>{' '}
-									this month.
-								</Text>
-							</Flex>
-						</Flex>
-					</CardHeader>
-					<Table variant='simple' color='#fff'>
-						<Thead>
-							<Tr my='.8rem' ps='0px'>
-								<Th
-									ps='0px'
-									color='gray.400'
-									fontFamily='Plus Jakarta Display'
-									borderBottomColor='#56577A'>
-									Companies
-								</Th>
-								<Th color='gray.400' fontFamily='Plus Jakarta Display' borderBottomColor='#56577A'>
-									Members
-								</Th>
-								<Th color='gray.400' fontFamily='Plus Jakarta Display' borderBottomColor='#56577A'>
-									Budget
-								</Th>
-								<Th color='gray.400' fontFamily='Plus Jakarta Display' borderBottomColor='#56577A'>
-									Completion
-								</Th>
-							</Tr>
-						</Thead>
-						<Tbody>
-							{dashboardTableData.map((row, index, arr) => {
-								return (
-									<DashboardTableRow
-										name={row.name}
-										logo={row.logo}
-										members={row.members}
-										budget={row.budget}
-										progression={row.progression}
-										lastItem={index === arr.length - 1 ? true : false}
-									/>
-								);
-							})}
-						</Tbody>
-					</Table>
-				</Card> */}
-
-      {/* Orders Overview */}
-      {/* <Card>
-					<CardHeader mb='32px'>
-						<Flex direction='column'>
-							<Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-								Orders overview
-							</Text>
-							<Flex align='center'>
-								<Icon as={AiFillCheckCircle} color='green.500' w='15px' h='15px' me='5px' />
-								<Text fontSize='sm' color='gray.400' fontWeight='normal'>
-									<Text fontWeight='bold' as='span' color='gray.400'>
-										+30%
-									</Text>{' '}
-									this month
-								</Text>
-							</Flex>
-						</Flex>
-					</CardHeader>
-					<CardBody>
-						<Flex direction='column' lineHeight='21px'>
-							{timelineData.map((row, index, arr) => {
-								return (
-									<TimelineRow
-										logo={row.logo}
-										title={row.title}
-										date={row.date}
-										color={row.color}
-										index={index}
-										arrLength={arr.length}
-									/>
-								);
-							})}
-						</Flex>
-					</CardBody>
-				</Card> */}
-      {/* </Grid> */}
+      ></Grid>
     </Flex>
   );
 }
