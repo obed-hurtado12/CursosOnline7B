@@ -10,6 +10,10 @@ import {
   Th,
   Thead,
   Tr,
+  IconButton,
+  Input,
+  InputGroup,
+  InputLeftElement,
 } from "@chakra-ui/react";
 
 // Custom components
@@ -26,47 +30,94 @@ import { tablesProjectData, tablesTableData } from "variables/general";
 
 // Icons
 import { AiFillCheckCircle } from "react-icons/ai";
+import { BellIcon, SearchIcon } from "@chakra-ui/icons";
 
 function Tables() {
+  let inputBg = "#0F1535";
+  let mainText = "gray.400";
+  let navbarIcon = "white";
+  let searchIcon = "white";
   return (
-    <Flex direction='column' pt={{ base: "120px", md: "75px" }}>
+    <Flex direction="column" pt={{ base: "120px", md: "75px" }}>
       {/* Authors Table */}
-      <Card overflowX={{ sm: "scroll", xl: "hidden" }} pb='0px'>
-        <CardHeader p='6px 0px 22px 0px'>
-          <Text fontSize='lg' color='#fff' fontWeight='bold'>
-            Authors Table
+      <Card overflowX={{ sm: "scroll", xl: "hidden" }} pb="0px">
+        <CardHeader p="6px 0px 22px 0px">
+          <Text fontSize="lg" color="#fff" fontWeight="bold">
+            Profesores
           </Text>
         </CardHeader>
+        <InputGroup
+          cursor="pointer"
+          bg={inputBg}
+          borderRadius="15px"
+          borderColor="rgba(226, 232, 240, 0.3)"
+        //   w={{
+        //     sm: "128px",
+        //     md: "200px",
+        //   }}
+        //   me={{ sm: "auto", md: "20px" }}
+        >
+          <InputLeftElement
+            children={
+              <IconButton
+                bg="inherit"
+                borderRadius="inherit"
+                _hover="none"
+                _active={{
+                  bg: "inherit",
+                  transform: "none",
+                  borderColor: "transparent",
+                }}
+                _focus={{
+                  boxShadow: "none",
+                }}
+                icon={<SearchIcon color={searchIcon} w="15px" h="15px" />}
+              ></IconButton>
+            }
+          />
+          <Input
+            fontSize="xs"
+            py="11px"
+            color={mainText}
+            placeholder="Buscar..."
+            borderRadius="inherit"
+          />
+        </InputGroup>
+        <br/>
         <CardBody>
-          <Table variant='simple' color='#fff'>
+          <Table variant="simple" color="#fff">
             <Thead>
-              <Tr my='.8rem' ps='0px' color='gray.400'>
+              <Tr my=".8rem" ps="0px" color="gray.400">
                 <Th
-                  ps='0px'
-                  color='gray.400'
-                  fontFamily='Plus Jakarta Display'
-                  borderBottomColor='#56577A'>
-                  Author
+                  ps="0px"
+                  color="gray.400"
+                  fontFamily="Plus Jakarta Display"
+                  borderBottomColor="#56577A"
+                >
+                  Profesor
                 </Th>
                 <Th
-                  color='gray.400'
-                  fontFamily='Plus Jakarta Display'
-                  borderBottomColor='#56577A'>
-                  Function
+                  color="gray.400"
+                  fontFamily="Plus Jakarta Display"
+                  borderBottomColor="#56577A"
+                >
+                  Curso
                 </Th>
                 <Th
-                  color='gray.400'
-                  fontFamily='Plus Jakarta Display'
-                  borderBottomColor='#56577A'>
-                  Status
+                  color="gray.400"
+                  fontFamily="Plus Jakarta Display"
+                  borderBottomColor="#56577A"
+                >
+                  Estado
                 </Th>
                 <Th
-                  color='gray.400'
-                  fontFamily='Plus Jakarta Display'
-                  borderBottomColor='#56577A'>
-                  Employed
+                  color="gray.400"
+                  fontFamily="Plus Jakarta Display"
+                  borderBottomColor="#56577A"
+                >
+                  Fecha Inicio
                 </Th>
-                <Th borderBottomColor='#56577A'></Th>
+                <Th borderBottomColor="#56577A"></Th>
               </Tr>
             </Thead>
             <Tbody>
@@ -89,22 +140,22 @@ function Tables() {
         </CardBody>
       </Card>
       {/* Projects Table */}
-      <Card my='22px' overflowX={{ sm: "scroll", xl: "hidden" }} pb='0px'>
-        <CardHeader p='6px 0px 22px 0px'>
-          <Flex direction='column'>
-            <Text fontSize='lg' color='#fff' fontWeight='bold' mb='.5rem'>
+      <Card my="22px" overflowX={{ sm: "scroll", xl: "hidden" }} pb="0px">
+        <CardHeader p="6px 0px 22px 0px">
+          <Flex direction="column">
+            <Text fontSize="lg" color="#fff" fontWeight="bold" mb=".5rem">
               Projects Table
             </Text>
-            <Flex align='center'>
+            <Flex align="center">
               <Icon
                 as={AiFillCheckCircle}
-                color='green.500'
-                w='15px'
-                h='15px'
-                me='5px'
+                color="green.500"
+                w="15px"
+                h="15px"
+                me="5px"
               />
-              <Text fontSize='sm' color='gray.400' fontWeight='normal'>
-                <Text fontWeight='bold' as='span' color='gray.400'>
+              <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                <Text fontWeight="bold" as="span" color="gray.400">
                   +30%
                 </Text>{" "}
                 this month
@@ -113,35 +164,39 @@ function Tables() {
           </Flex>
         </CardHeader>
         <CardBody>
-          <Table variant='simple' color='#fff'>
+          <Table variant="simple" color="#fff">
             <Thead>
-              <Tr my='.8rem' ps='0px'>
+              <Tr my=".8rem" ps="0px">
                 <Th
-                  ps='0px'
-                  color='gray.400'
-                  fontFamily='Plus Jakarta Display'
-                  borderBottomColor='#56577A'>
+                  ps="0px"
+                  color="gray.400"
+                  fontFamily="Plus Jakarta Display"
+                  borderBottomColor="#56577A"
+                >
                   Companies
                 </Th>
                 <Th
-                  color='gray.400'
-                  fontFamily='Plus Jakarta Display'
-                  borderBottomColor='#56577A'>
+                  color="gray.400"
+                  fontFamily="Plus Jakarta Display"
+                  borderBottomColor="#56577A"
+                >
                   Budget
                 </Th>
                 <Th
-                  color='gray.400'
-                  fontFamily='Plus Jakarta Display'
-                  borderBottomColor='#56577A'>
+                  color="gray.400"
+                  fontFamily="Plus Jakarta Display"
+                  borderBottomColor="#56577A"
+                >
                   Status
                 </Th>
                 <Th
-                  color='gray.400'
-                  fontFamily='Plus Jakarta Display'
-                  borderBottomColor='#56577A'>
+                  color="gray.400"
+                  fontFamily="Plus Jakarta Display"
+                  borderBottomColor="#56577A"
+                >
                   Completion
                 </Th>
-                <Th borderBottomColor='#56577A'></Th>
+                <Th borderBottomColor="#56577A"></Th>
               </Tr>
             </Thead>
             <Tbody>

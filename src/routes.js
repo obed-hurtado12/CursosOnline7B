@@ -38,7 +38,7 @@ var dashRoutes = [
   },
   {
     path: "/tables",
-    name: "Tables",
+    name: "Data Tables",
     rtlName: "لوحة القيادة",
     icon: <StatsIcon color='inherit' />,
     component: Tables,
@@ -52,14 +52,14 @@ var dashRoutes = [
     component: Billing,
     layout: "/admin",
   },
-  {
-    path: "/rtl-support-page",
-    name: "RTL",
-    rtlName: "آرتيإل",
-    icon: <SupportIcon color='inherit' />,
-    component: RTLPage,
-    layout: "/rtl",
-  },
+  // {
+  //   path: "/rtl-support-page",
+  //   name: "RTL",
+  //   rtlName: "آرتيإل",
+  //   icon: <SupportIcon color='inherit' />,
+  //   component: RTLPage,
+  //   layout: "/rtl",
+  // },
   {
     path: "/error404",
     name: "Error404",
@@ -77,7 +77,7 @@ var dashRoutes = [
     layout: "/admin",
   },
   {
-    name: "ACCOUNT PAGES",
+    name: "SESIÓN Y CUENTA",
     category: "account",
     rtlName: "صفحات",
     state: "pageCollapse",
