@@ -1,6 +1,6 @@
 import Dashboard from "views/Dashboard/Dashboard.js";
-import Tables from "views/Dashboard/Tables.js";
-import Billing from "views/Dashboard/Chat.js";
+import Error404 from "views/Dashboard/Error404.js";
+import Chat from "views/Dashboard/Chat.js";
 import RTLPage from "views/RTL/RTLPage.js";
 import Profile from "views/Dashboard/Profile.js";
 import SignIn from "views/Pages/SignIn.js";
@@ -26,11 +26,11 @@ var dashRoutes = [
     layout: "/admin",
   },
   {
-    path: "/tables",
-    name: "Tables",
+    path: "/error404",
+    name: "Error404",
     rtlName: "لوحة القيادة",
     icon: <StatsIcon color='inherit' />,
-    component: Tables,
+    component: Error404,
     layout: "/admin",
   },
   {
@@ -38,7 +38,7 @@ var dashRoutes = [
     name: "Chat",
     rtlName: "لوحة القيادة",
     icon: <CreditIcon color='inherit' />,
-    component: Billing,
+    component: Chat,
     layout: "/admin",
   },
   {
