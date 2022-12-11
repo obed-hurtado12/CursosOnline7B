@@ -1,627 +1,468 @@
-/*!
-
-=========================================================
-* Vision UI Free Chakra - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-chakra
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-chakra/blob/master LICENSE.md)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-// Chakra imports
 import {
-	Avatar,
-	AvatarBadge,
-	AvatarGroup,
-	Box,
-	Button,
-	CircularProgress,
-	CircularProgressLabel,
-	DarkMode,
-	Flex,
-	Grid,
-	Icon,
-	Image,
-	Link,
-	Switch,
-	Text
-} from '@chakra-ui/react';
-import avatar11 from 'assets/img/avatars/avatar11.png';
-// Images
-import avatar2 from 'assets/img/avatars/avatar2.png';
-import avatar3 from 'assets/img/avatars/avatar3.png';
-import avatar4 from 'assets/img/avatars/avatar4.png';
-import avatar6 from 'assets/img/avatars/avatar6.png';
-import bgProfile from 'assets/img/bgProfile.png';
-import ProjectImage1 from 'assets/img/ProjectImage1.png';
-import ProjectImage2 from 'assets/img/ProjectImage2.png';
-import ProjectImage3 from 'assets/img/ProjectImage3.png';
+  Box,
+  Button,
+  CircularProgress,
+  CircularProgressLabel,
+  Flex,
+  Grid,
+  Icon,
+  Progress,
+  SimpleGrid,
+  Spacer,
+  Stack,
+  Stat,
+  StatHelpText,
+  StatLabel,
+  StatNumber,
+  Table,
+  Tbody,
+  Text,
+  Th,
+  Thead,
+  Tr,
+} from "@chakra-ui/react";
+import medusa from "assets/img/cardimgfree.png";
+import medBg from "../../assets/img/avatars/avatar7.png";
+import Banco2 from "../../assets/img/Fondos/Banco1.jpg";
+
 // Custom components
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import CardHeader from 'components/Card/CardHeader';
-import LineChart from 'components/Charts/LineChart';
-import IconBox from 'components/Icons/IconBox';
-import { CarIcon, FulgerIcon, FulgerWhiteIcon } from 'components/Icons/Icons';
-import { Separator } from 'components/Separator/Separator';
-import React from 'react';
-import { BsArrowRight } from 'react-icons/bs';
-import { FaCube, FaFacebook, FaInstagram, FaPencilAlt, FaPenFancy, FaTwitter } from 'react-icons/fa';
-// Icons
-import { IoDocumentsSharp } from 'react-icons/io5';
+import Card from "components/Card/Card.js";
+import CardBody from "components/Card/CardBody.js";
+import CardHeader from "components/Card/CardHeader.js";
+import BarChart from "components/Charts/BarChart";
+import LineChart from "components/Charts/LineChart";
+import IconBox from "components/Icons/IconBox";
+
+// Custom icons
+import {
+  CartIcon,
+  DocumentIcon,
+  GlobeIcon,
+  RocketIcon,
+  StatsIcon,
+  WalletIcon,
+} from "components/Icons/Icons.js";
+import { RiMastercardFill } from "react-icons/ri";
+
+// Tables
+import DashboardTableRow from "components/Tables/DashboardTableRow";
+import TimelineRow from "components/Tables/TimelineRow";
+import React from "react";
+// Styles for the circular bar
+import { AiFillCheckCircle } from "react-icons/ai";
+import { BiHappy } from "react-icons/bi";
+// icons
+import { BsArrowLeft } from "react-icons/bs";
+import {
+  IoCheckmarkDoneCircleSharp,
+  IoEllipsisHorizontal,
+} from "react-icons/io5";
 // Data
 import {
-	lineChartDataProfile1,
-	lineChartDataProfile2,
-	lineChartOptionsProfile1,
-	lineChartOptionsProfile2
-} from 'variables/charts';
+  barChartDataDashboard,
+  barChartOptionsDashboard,
+  lineChartDataDashboard,
+  lineChartOptionsDashboard,
+} from "variables/charts";
+import { dashboardTableData, timelineData } from "variables/general";
 
-function Profile() {
-	return (
-		<Flex direction='column' mt={{ sm: '25px', md: '0px' }}>
-			<Box
-				mb={{ sm: '24px', md: '50px', xl: '20px' }}
-				borderRadius='15px'
-				px='0px'
-				display='flex'
-				flexDirection='column'
-				justifyContent='center'
-				align='center'>
-				{/* Header */}
-				<Card
-					direction={{ sm: 'column', md: 'row' }}
-					mx='auto'
-					maxH='330px'
-					w={{ sm: '90%', xl: '100%' }}
-					justifyContent={{ sm: 'center', md: 'space-between' }}
-					align='center'
-					p='24px'
-					borderRadius='20px'
-					mt='100px'>
-					<Flex align='center' direction={{ sm: 'column', md: 'row' }}>
-						<Flex
-							align='center'
-							mb={{ sm: '10px', md: '0px' }}
-							direction={{ sm: 'column', md: 'row' }}
-							w={{ sm: '100%' }}
-							textAlign={{ sm: 'center', md: 'start' }}>
-							<Avatar me={{ md: '22px' }} src={avatar11} w='80px' h='80px' borderRadius='15px'>
-								<AvatarBadge
-									cursor='pointer'
-									borderRadius='8px'
-									border='transparent'
-									bg='linear-gradient(138.78deg, rgba(6, 11, 40, 0.94) 17.44%, rgba(10, 14, 35, 0.49) 93.55%, rgba(10, 14, 35, 0.69) 93.55%)'
-									boxSize='26px'
-									backdropFilter='blur(120px)'>
-									<Icon h='12px' w='12px' color='#fff' as={FaPencilAlt} />
-								</AvatarBadge>
-							</Avatar>
-							<Flex direction='column' maxWidth='100%' my={{ sm: '14px' }}>
-								<Text
-									fontSize={{ sm: 'lg', lg: 'xl' }}
-									color='#fff'
-									fontWeight='bold'
-									ms={{ sm: '8px', md: '0px' }}>
-									Mark Johnson
-								</Text>
-								<Text fontSize={{ sm: 'sm', md: 'md' }} color='gray.400'>
-									mark@simmmple.com
-								</Text>
-							</Flex>
-						</Flex>
-						<Flex direction={{ sm: 'column', lg: 'row' }} w={{ sm: '100%', md: '50%', lg: 'auto' }}>
-							<Button
-								borderRadius='12px'
-								bg='brand.200'
-								_hover={{ opacity: '0.8' }}
-								_active={{ opacity: '0.9' }}
-								me={{ base: 'none', lg: '20px' }}
-								leftIcon={<Icon color='white' as={FaCube} me='6px' />}>
-								<Text fontSize='xs' color='#fff' fontWeight='bold'>
-									OVERVIEW
-								</Text>
-							</Button>
-							<Button
-								borderRadius='12px'
-								bg='transparent'
-								_hover={{
-									bg: 'brand.200'
-								}}
-								_active={{
-									bg: 'brand.200'
-								}}
-								me={{ base: 'none', lg: '20px' }}
-								leftIcon={<Icon color='white' as={IoDocumentsSharp} me='6px' />}>
-								<Text fontSize='xs' color='#fff' fontWeight='bold'>
-									TEAMS
-								</Text>
-							</Button>
-							<Button
-								borderRadius='12px'
-								bg='transparent'
-								_hover={{
-									bg: 'brand.200'
-								}}
-								_active={{
-									bg: 'brand.200'
-								}}
-								leftIcon={<Icon color='white' as={FaPenFancy} me='6px' />}>
-								<Text fontSize='xs' color='#fff' fontWeight='bold'>
-									PROJECTS
-								</Text>
-							</Button>
-						</Flex>
-					</Flex>
-				</Card>
-			</Box>
-			<Grid
-				templateColumns={{
-					sm: '1fr',
-					xl: 'repeat(2, 1fr)',
-					'2xl': '1fr 2fr 1.2fr'
-				}}
-				gap='22px'
-				mb='24px'>
-				{/* Welcome Card */}
-				<Card
-					bgImage={bgProfile}
-					bgSize='cover'
-					maxW={{ sm: '325px', md: '725px', lg: '980px' }}
-					h={{ sm: '270px', lg: '350px', xl: '410px' }}
-					gridArea={{ xl: '1 / 1 / 2 / 2', '2xl': 'auto' }}>
-					<Flex direction='column' h='100%'>
-						<Text color='#fff' fontSize='30px' fontWeight='bold' mb='3px'>
-							Welcome back!
-						</Text>
-						<Text color='#fff' fontSize='sm' mb='auto'>
-							Nice to see you, Mark Johnson!
-						</Text>
-						<Button alignSelf='flex-start' variant='no-hover' bg='transparent' p='0px'>
-							<Text
-								fontSize='xs'
-								color='#fff'
-								me='5px'
-								cursor='pointer'
-								transition='all .3s ease'
-								_hover={{ me: '6px' }}>
-								Tab to record
-							</Text>
-							<Icon
-								as={BsArrowRight}
-								w='13px'
-								h='13px'
-								color='#fff'
-								transition='all .3s ease'
-								cursor='pointer'
-								_hover={{ transform: 'translateX(20%)' }}
-							/>
-						</Button>
-					</Flex>
-				</Card>
-				{/* Car Informations */}
-				<Card
-					p='16px'
-					maxH={{ lg: '410px' }}
-					maxW={{ sm: '325px', md: '725px', lg: '980px', xl: '100%' }}
-					gridArea={{ xl: '2 / 1 / 3 / 3', '2xl': 'auto' }}>
-					<CardHeader p='12px 5px' mb='12px'>
-						<Flex direction='column'>
-							<Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-								Car Informations
-							</Text>
-							<Text fontSize='sm' color='gray.400'>
-								Hello, Mark Johnson! Your Car is ready.
-							</Text>
-						</Flex>
-					</CardHeader>
-					<CardBody w='100%'>
-						<Flex w='100%' direction={{ sm: 'column', md: 'row' }}>
-							<Flex
-								direction='column'
-								align='center'
-								me={{ md: '16px', lg: '50px' }}
-								mb={{ sm: '12px', md: '0px' }}>
-								<CircularProgress
-									size={200}
-									value={68}
-									thickness={6}
-									color='green.400'
-									variant='vision'>
-									<CircularProgressLabel>
-										<Flex direction='column' justify='center' align='center'>
-											<LightningIcon w='14px' h='22px' mb='8px' />
-											<Text color='#fff' fontSize='36px' fontWeight='bold' mb='6px'>
-												68%
-											</Text>
-											<Text color='gray.400' fontSize='sm'>
-												Current load
-											</Text>
-										</Flex>
-									</CircularProgressLabel>
-								</CircularProgress>
-								<Flex direction='column' mt='18px' align='center'>
-									<Text color='#fff' fontSize='lg' fontWeight='bold' mb='2px'>
-										0h 58 min
-									</Text>
-									<Text color='gray.500' fontSize='sm'>
-										Time to full charge
-									</Text>
-								</Flex>
-							</Flex>
-							<Grid
-								templateColumns={{ sm: '1fr', md: 'repeat(2, 1fr)' }}
-								gap='24px'
-								w='100%'
-								alignSelf='flex-start'>
-								<Flex
-									align='center'
-									p='18px'
-									justify='space-between'
-									bg='linear-gradient(126.97deg, rgba(6, 11, 38, 0.74) 28.26%, rgba(26, 31, 55, 0.5) 91.2%)'
-									borderRadius='20px'>
-									<Flex direction='column' me='auto'>
-										<Text fontSize='xs' color='gray.400' mb='3px'>
-											Battery Health
-										</Text>
-										<Text color='#fff' fontSize='22px' fontWeight='bold'>
-											76%
-										</Text>
-									</Flex>
-									<IconBox bg='brand.200' w='56px' h='56px' direction='column'>
-										<CarIcon w='28px' h='28px' />
-										<FulgerWhiteIcon w='8px' h='11px' transform='rotate(90deg)' />
-									</IconBox>
-								</Flex>
-								<Flex
-									align='center'
-									p='18px'
-									pe='0px'
-									justify='space-between'
-									bg='linear-gradient(126.97deg, rgba(6, 11, 38, 0.74) 28.26%, rgba(26, 31, 55, 0.5) 91.2%)'
-									borderRadius='20px'>
-									<Flex direction='column' me='auto'>
-										<Text fontSize='xs' color='gray.400' mb='3px'>
-											Efficiency
-										</Text>
-										<Text color='#fff' fontSize='22px' fontWeight='bold'>
-											+20%
-										</Text>
-									</Flex>
-									<Box maxH='75px'>
-										<LineChart
-											lineChartData={lineChartDataProfile1}
-											lineChartOptions={lineChartOptionsProfile1}
-										/>
-									</Box>
-								</Flex>
-								<Flex
-									align='center'
-									p='18px'
-									justify='space-between'
-									bg='linear-gradient(126.97deg, rgba(6, 11, 38, 0.74) 28.26%, rgba(26, 31, 55, 0.5) 91.2%)'
-									borderRadius='20px'>
-									<Flex direction='column' me='auto'>
-										<Text fontSize='xs' color='gray.400' mb='3px'>
-											Consumption
-										</Text>
-										<Text color='#fff' fontSize='22px' fontWeight='bold'>
-											163W/km
-										</Text>
-									</Flex>
-									<IconBox bg='brand.200' w='56px' h='56px'>
-										<FulgerWhiteIcon w='24px' h='24px' color='#fff' />
-									</IconBox>
-								</Flex>
-								<Flex
-									align='center'
-									p='18px'
-									pe='0px'
-									justify='space-between'
-									bg='linear-gradient(126.97deg, rgba(6, 11, 38, 0.74) 28.26%, rgba(26, 31, 55, 0.5) 91.2%)'
-									borderRadius='20px'>
-									<Flex direction='column' me='auto'>
-										<Text fontSize='xs' color='gray.400' mb='3px'>
-											This Week
-										</Text>
-										<Text color='#fff' fontSize='22px' fontWeight='bold'>
-											1.342km
-										</Text>
-									</Flex>
-									<Box maxH='75px'>
-										<LineChart
-											lineChartData={lineChartDataProfile2}
-											lineChartOptions={lineChartOptionsProfile2}
-										/>
-									</Box>
-								</Flex>
-							</Grid>
-						</Flex>
-					</CardBody>
-				</Card>
-				{/* Profile Information */}
-				<Card
-					p='16px'
-					maxH={{ md: '410px' }}
-					maxW={{ sm: '325px', md: '725px', lg: '980px' }}
-					gridArea={{ xl: '1 / 2 / 2 / 3', '2xl': 'auto' }}>
-					<CardHeader p='12px 5px' mb='12px'>
-						<Text fontSize='lg' color='#fff' fontWeight='bold'>
-							Profile Information
-						</Text>
-					</CardHeader>
-					<CardBody px='5px'>
-						<Flex direction='column'>
-							<Text fontSize='sm' color={'gray.400'} fontWeight='400' mb='15px'>
-								Hi, I’m Mark Johnson, Decisions: If you can’t decide, the answer is no. If two equally
-								difficult paths, choose the one more painful in the short term (pain avoidance is
-								creating an illusion of equality).
-							</Text>
-							<Separator mb='30px' />
-							<Flex align='center' mb='18px'>
-								<Text fontSize='sm' color={'gray.400'} me='10px'>
-									Full Name:{' '}
-								</Text>
-								<Text fontSize='sm' color='#fff' fontWeight='400'>
-									Mark Johnson
-								</Text>
-							</Flex>
-							<Flex align='center' mb='18px'>
-								<Text fontSize='sm' color={'gray.400'} me='10px'>
-									Mobile:{' '}
-								</Text>
-								<Text fontSize='sm' color='#fff' fontWeight='400'>
-									(44) 123 1234 123
-								</Text>
-							</Flex>
-							<Flex align='center' mb='18px'>
-								<Text fontSize='sm' color={'gray.400'} me='10px'>
-									Email:{' '}
-								</Text>
-								<Text fontSize='sm' color='#fff' fontWeight='400'>
-									mark@simmmple.com
-								</Text>
-							</Flex>
-							<Flex align='center' mb='18px'>
-								<Text fontSize='sm' color={'gray.400'} me='10px'>
-									Location:{' '}
-								</Text>
-								<Text fontSize='sm' color='#fff' fontWeight='400'>
-									United States
-								</Text>
-							</Flex>
-							<Flex align='center' mb='18px'>
-								<Text fontSize='sm' color={'gray.400'} me='10px'>
-									Social Media:{' '}
-								</Text>
-								<Flex>
-									<Link
-										href='#'
-										color='teal.300'
-										fontSize='lg'
-										me='10px'
-										_hover={{ color: 'teal.300' }}>
-										<Icon color='white' as={FaFacebook} w='12px' h='12px' />
-									</Link>
-									<Link
-										href='#'
-										color='teal.300'
-										fontSize='lg'
-										me='10px'
-										_hover={{ color: 'teal.300' }}>
-										<Icon color='white' as={FaInstagram} w='12px' h='12px' />
-									</Link>
-									<Link
-										href='#'
-										color='teal.300'
-										fontSize='lg'
-										me='10px'
-										_hover={{ color: 'teal.300' }}>
-										<Icon color='white' as={FaTwitter} w='12px' h='12px' />
-									</Link>
-								</Flex>
-							</Flex>
-						</Flex>
-					</CardBody>
-				</Card>
-			</Grid>
-			<Grid templateColumns={{ sm: '1fr', xl: '1fr 3fr' }} gap='20px'>
-				<DarkMode>
-					{/* Platform Settings */}
-					<Card p='16px' gridArea={{ xl: '1 / 1 / 2 / 2' }}>
-						<CardHeader p='12px 5px' mb='12px'>
-							<Text fontSize='lg' color='#fff' fontWeight='bold'>
-								Platform Settings
-							</Text>
-						</CardHeader>
-						<CardBody px='5px'>
-							<Flex direction='column'>
-								<Text fontSize='10px' color={'gray.400'} mb='20px'>
-									ACCOUNT
-								</Text>
-								<Flex align='center' mb='20px'>
-									<Switch variant='brand' colorScheme='brand' me='10px' defaultChecked />
-									<Text noOfLines={1} fontSize='sm' color={'gray.400'} fontWeight='400'>
-										Email me when someone follows me
-									</Text>
-								</Flex>
-								<Flex align='center' mb='20px'>
-									<Switch colorScheme='brand' me='10px' />
-									<Text noOfLines={1} fontSize='sm' color={'gray.400'} fontWeight='400'>
-										Email me when someone answers on my post
-									</Text>
-								</Flex>
-								<Flex align='center' mb='20px'>
-									<Switch colorScheme='brand' me='10px' defaultChecked />
-									<Text noOfLines={1} fontSize='sm' color={'gray.400'} fontWeight='400'>
-										Email me when someone mentions me
-									</Text>
-								</Flex>
-								<Text fontSize='10px' color={'gray.400'} m='6px 0px 20px 0px'>
-									APPLICATION
-								</Text>
-								<Flex align='center' mb='20px'>
-									<Switch colorScheme='brand' me='10px' />
-									<Text noOfLines={1} fontSize='sm' color={'gray.400'} fontWeight='400'>
-										New launches and projects
-									</Text>
-								</Flex>
-								<Flex align='center' mb='20px'>
-									<Switch colorScheme='brand' me='10px' defaultChecked />
-									<Text noOfLines={1} fontSize='sm' color={'gray.400'} fontWeight='400'>
-										Monthly product changes
-									</Text>
-								</Flex>
-								<Flex align='center' mb='20px'>
-									<Switch colorScheme='brand' me='10px' />
-									<Text noOfLines={1} fontSize='sm' color={'gray.400'} fontWeight='400'>
-										Subscribe to newsletter
-									</Text>
-								</Flex>
-								<Flex align='center' mb='20px'>
-									<Switch colorScheme='brand' me='10px' defaultChecked />
-									<Text noOfLines={1} fontSize='sm' color={'gray.400'} fontWeight='400'>
-										Receive mails weekly
-									</Text>
-								</Flex>
-							</Flex>
-						</CardBody>
-					</Card>
-				</DarkMode>
-				{/* Projects */}
-				<Card gridArea={{ xl: '1 /2 /2/ 5' }} p='16px'>
-					<CardHeader p='12px 5px' mb='12px'>
-						<Flex direction='column'>
-							<Text fontSize='lg' color='#fff' fontWeight='bold'>
-								Projects
-							</Text>
-							<Text fontSize='sm' color={'gray.400'} fontWeight='400'>
-								Architects design houses
-							</Text>
-						</Flex>
-					</CardHeader>
-					<CardBody px='5px'>
-						<Grid
-							templateColumns={{
-								sm: '1fr',
-								md: '1fr 1fr',
-								xl: 'repeat(3, 1fr)'
-							}}
-							templateRows={{
-								sm: '1fr 1fr 1fr auto',
-								md: '1fr 1fr',
-								xl: '1fr'
-							}}
-							gap='24px'>
-							<Flex direction='column'>
-								<Box mb='20px' position='relative' borderRadius='20px'>
-									<Image src={ProjectImage1} borderRadius='20px' />
-								</Box>
-								<Flex direction='column'>
-									<Text fontSize='10px' color={'gray.400'} mb='10px'>
-										Project #1
-									</Text>
-									<Text fontSize='xl' color='#fff' fontWeight='bold' mb='10px'>
-										Modern
-									</Text>
-									<Text fontSize='sm' color={'gray.400'} fontWeight='400' mb='20px'>
-										As Uber works through a huge amount of internal management turmoil.
-									</Text>
-									<Flex justifyContent='space-between' mt='auto'>
-										<Button
-											variant='outlineWhite'
-											minW='110px'
-											h='36px'
-											fontSize='10px'
-											px='1.5rem'>
-											VIEW ALL
-										</Button>
-										<AvatarGroup size='xs'>
-											<Avatar borderColor='#121241' name='Ryan Florence' src={avatar6} />
-											<Avatar borderColor='#121241' name='Segun Adebayo' src={avatar2} />
-											<Avatar borderColor='#121241' name='Kent Dodds' src={avatar3} />
-											<Avatar borderColor='#121241' name='Prosper Otemuyiwa' src={avatar4} />
-										</AvatarGroup>
-									</Flex>
-								</Flex>
-							</Flex>
-							<Flex direction='column'>
-								<Box mb='20px' position='relative' borderRadius='20px'>
-									<Image src={ProjectImage2} borderRadius='20px' />
-								</Box>
-								<Flex direction='column'>
-									<Text fontSize='10px' color={'gray.400'} mb='10px'>
-										Project #2
-									</Text>
-									<Text fontSize='xl' color='#fff' fontWeight='bold' mb='10px'>
-										Scandinavian
-									</Text>
-									<Text fontSize='sm' color={'gray.400'} mb='20px'>
-										Music is something that every person has his or her own specific opinion about.
-									</Text>
-									<Flex justifyContent='space-between' mt='auto'>
-										<Button
-											variant='outlineWhite'
-											minW='110px'
-											h='36px'
-											fontSize='10px'
-											px='1.5rem'>
-											VIEW ALL
-										</Button>
-										<AvatarGroup size='xs'>
-											<Avatar borderColor='#121241' name='Ryan Florence' src={avatar6} />
-											<Avatar borderColor='#121241' name='Segun Adebayo' src={avatar2} />
-											<Avatar borderColor='#121241' name='Kent Dodds' src={avatar3} />
-											<Avatar borderColor='#121241' name='Prosper Otemuyiwa' src={avatar4} />
-										</AvatarGroup>
-									</Flex>
-								</Flex>
-							</Flex>
-							<Flex direction='column' h='100%'>
-								<Box mb='20px' position='relative' borderRadius='20px'>
-									<Image src={ProjectImage3} borderRadius='20px' />
-								</Box>
-								<Flex direction='column'>
-									<Text fontSize='10px' color={'gray.400'} mb='10px'>
-										Project #3
-									</Text>
-									<Text fontSize='xl' color='#fff' fontWeight='bold' mb='10px'>
-										Minimalist
-									</Text>
-									<Text fontSize='sm' color={'gray.400'} fontWeight='400' mb='20px'>
-										Different people have different taste, especially various types of music.
-									</Text>
-									<Flex justifyContent='space-between' mt='auto'>
-										<Button
-											variant='outlineWhite'
-											minW='110px'
-											h='36px'
-											fontSize='10px'
-											px='1.5rem'>
-											VIEW ALL
-										</Button>
-										<AvatarGroup size='xs'>
-											<Avatar borderColor='#121241' name='Ryan Florence' src={avatar6} />
-											<Avatar borderColor='#121241' name='Segun Adebayo' src={avatar2} />
-											<Avatar borderColor='#121241' name='Kent Dodds' src={avatar3} />
-											<Avatar borderColor='#121241' name='Prosper Otemuyiwa' src={avatar4} />
-										</AvatarGroup>
-									</Flex>
-								</Flex>
-							</Flex>
-						</Grid>
-					</CardBody>
-				</Card>
-			</Grid>
-		</Flex>
-	);
+export default function Dashboard() {
+  return (
+    <Flex flexDirection="column" pt={{ base: "120px", md: "75px" }}>
+      <Grid
+        templateColumns={{ sm: "1fr", md: "1fr 1fr", "2xl": "2fr 1.2fr 1.5fr" }}
+        my="26px"
+        gap="18px"
+      >
+        {/* Welcome Card */}
+        {/* <Card
+          p="0px"
+          gridArea={{ md: "1 / 1 / 2 / 3", "2xl": "auto" }}
+          bgImage={medusa}
+          bgPosition="center"
+          bgRepeat="no-repeat"
+          bgSize="cover"
+        >
+          <CardBody w="100%" h="100%">
+            <Flex flexDirection={{ sm: "column", lg: "row" }} w="100%" h="100%">
+              <Flex
+                flexDirection="column"
+                h="100%"
+                p="22px"
+                minW="60%"
+                lineHeight="1.6"
+              >
+                <Text fontSize="sm" color="gray.400" fontWeight="bold">
+                  Bienvenido
+                </Text>
+                <Text fontSize="28px" color="#fff" fontWeight="bold" mb="18px">
+                  Obed Hurtado
+                </Text>
+                <Text
+                  fontSize="md"
+                  color="gray.400"
+                  fontWeight="normal"
+                  mb="auto"
+                >
+                  Perfil <br />
+                  Ask me anything.
+                </Text>
+                <Spacer />
+                <Flex align="center">
+                  <Button
+                    p="0px"
+                    variant="no-hover"
+                    bg="transparent"
+                    my={{ sm: "1.5rem", lg: "0px" }}
+                  >
+                    <Text
+                      fontSize="sm"
+                      color="#fff"
+                      fontWeight="bold"
+                      cursor="pointer"
+                      transition="all .3s ease"
+                      my={{ sm: "1.5rem", lg: "0px" }}
+                      _hover={{ me: "4px" }}
+                    >
+                      Tab to record
+                    </Text>
+                    <Icon
+                      as={BsArrowLeft}
+                      w="20px"
+                      h="20px"
+                      color="#fff"
+                      fontSize="2xl"
+                      transition="all .3s ease"
+                      mx=".3rem"
+                      cursor="pointer"
+                      pt="4px"
+                      _hover={{ transform: "translateX(-20%)" }}
+                    />
+                  </Button>
+                </Flex>
+              </Flex>
+            </Flex>
+          </CardBody>
+        </Card> */}
+
+        <Card>
+          {/* <Flex direction="column">
+            <Flex justify="space-between" align="center" mb="40px">
+              <img
+                src={medBg}
+                style={{ height: "200px", width: "200px", borderRadius: "20%" }}
+              ></img>
+              <Button
+                borderRadius="12px"
+                w="300px"
+                h="38px"
+                bg="#22234B"
+                _hover="none"
+                _active="none"
+              >
+				<Text color="#fff" fontSize="lg" fontWeight="bold">
+                Información Personal
+              </Text>
+			  {" -"}
+                <Icon as={IoEllipsisHorizontal} color="#7551FF" />
+              </Button>
+            </Flex>
+            <Flex direction={{ sm: "column", md: "row" }}>
+              <Flex
+                direction="column"
+                me={{ md: "6px", lg: "52px" }}
+                mb={{ sm: "16px", md: "0px" }}
+              >
+                <Flex
+                  direction="column"
+                  p="22px"
+                  pe={{ sm: "22e", md: "8px", lg: "22px" }}
+                  minW={{ sm: "220px", md: "140px", lg: "220px" }}
+                  bg="linear-gradient(126.97deg, #060C29 28.26%, rgba(4, 12, 48, 0.5) 91.2%)"
+                  borderRadius="20px"
+                  mb="20px"
+                >
+                  <Text color="gray.400" fontSize="sm" mb="4px">
+                    Nombre:
+                  </Text>
+                  <Text color="#fff" fontSize="lg" fontWeight="bold">
+                    José Manuel Salgado Salgado
+                  </Text>
+                </Flex>
+
+				<Flex
+                  direction="column"
+                  p="22px"
+                  pe={{ sm: "22e", md: "8px", lg: "22px" }}
+                  minW={{ sm: "220px", md: "140px", lg: "220px" }}
+                  bg="linear-gradient(126.97deg, #060C29 28.26%, rgba(4, 12, 48, 0.5) 91.2%)"
+                  borderRadius="20px"
+                  mb="20px"
+                >
+                  <Text color="gray.400" fontSize="sm" mb="4px">
+                    Email:
+                  </Text>
+                  <Text color="#fff" fontSize="lg" fontWeight="bold">
+                    josesalg@utez.edu.mx
+                  </Text>
+                </Flex>
+
+                <Flex
+                  direction="column"
+                  p="22px"
+                  pe={{ sm: "22px", md: "8px", lg: "22px" }}
+                  minW={{ sm: "170px", md: "140px", lg: "170px" }}
+                  bg="linear-gradient(126.97deg, #060C29 28.26%, rgba(4, 12, 48, 0.5) 91.2%)"
+                  borderRadius="20px"
+                >
+                  <Text color="gray.400" fontSize="sm" mb="4px">
+                    Telefono:
+                  </Text>
+                  <Text color="#fff" fontSize="lg" fontWeight="bold">
+                    7771305580
+                  </Text>
+                </Flex>
+              </Flex>
+            </Flex>
+			
+          </Flex> */}
+          <Card>
+            <div className="text-center">
+              <Button
+                borderRadius="12px"
+                w="300px"
+                h="42px"
+                bg="#22234B"
+                _hover="none"
+                _active="none"
+              >
+                <Text color="#fff" fontSize="lg" fontWeight="bold">
+                  Información Personal
+                </Text>
+                {" -"}
+                <Icon as={IoEllipsisHorizontal} color="#7551FF" />
+              </Button>
+            </div>
+
+            <Flex direction="column">
+              <Flex justify="space-between" align="center" mb="40px">
+                <Flex
+                  direction="column"
+                  me={{ md: "6px", lg: "52px" }}
+                  mb={{ sm: "16px", md: "0px" }}
+                >
+                  <Flex
+                    direction="column"
+                    p="22px"
+                    pe={{ sm: "22e", md: "8px", lg: "22px" }}
+                    minW={{ sm: "220px", md: "140px", lg: "220px" }}
+                    bg="linear-gradient(126.97deg, #060C29 28.26%, rgba(4, 12, 48, 0.5) 91.2%)"
+                    borderRadius="20px"
+                    mb="20px"
+                  >
+					 <Text color="gray.400" fontSize="sm" mb="4px">
+                      Nombre:
+                    </Text>
+                    <Text color="#fff" fontSize="lg" fontWeight="bold">
+                      José Manuel Salgado Salgado
+                    </Text>
+					<br/>
+                    <Text color="gray.400" fontSize="sm" mb="4px">
+                      Email:
+                    </Text>
+                    <Text color="#fff" fontSize="lg" fontWeight="bold">
+                      joseManuel@utez.edu.mx
+                    </Text>
+					<br/>
+					<Text color="gray.400" fontSize="sm" mb="4px">
+                      Telefono:
+                    </Text>
+                    <Text color="#fff" fontSize="lg" fontWeight="bold">
+                      7771305580
+                    </Text>
+					<br/>
+					<Text color="gray.400" fontSize="sm" mb="4px">
+                      Dirección:
+                    </Text>
+                    <Text color="#fff" fontSize="lg" fontWeight="bold">
+                      Laurel #1, Col. <i><strong>"La Rivera"</strong></i> Acatlipa, Temixco, Morelos.
+                    </Text>
+					
+                  </Flex>
+
+                  
+                </Flex>
+                <img
+                  src={medBg}
+                  style={{
+                    height: "220px",
+                    width: "220px",
+                    borderRadius: "20%",
+                  }}
+                ></img>
+              </Flex>
+            </Flex>
+          </Card>
+		 
+        </Card>
+
+        {/* INFORMACIÓN DE CUENTA BANCARIA */}
+        <Card>
+          <Flex direction="column">
+            <Flex justify="space-between" align="center" mb="40px">
+              <Button
+                borderRadius="12px"
+                w="400px"
+                h="42px"
+                bg="#22234B"
+                _hover="none"
+                _active="none"
+              >
+                <Text color="#fff" fontSize="lg" fontWeight="bold">
+                  Información de Cuenta Bancaria
+                </Text>
+                {" -"}
+                <Icon as={IoEllipsisHorizontal} color="#7551FF" />
+              </Button>
+            </Flex>
+            {/* MASTERCARD */}
+            <Flex direction="column">
+              <Card
+                backgroundImage={Banco2}
+                backgroundRepeat="no-repeat"
+                bgSize="cover"
+                bgPosition="10%"
+                p="16px"
+              >
+                <CardBody h="100%" w="100%">
+                  <Flex
+                    direction="column"
+                    color="white"
+                    h="100%"
+                    p="0px 10px 20px 10px"
+                    w="100%"
+                  >
+                    <Flex justify="space-between" align="center">
+                      <Text fontSize="md" fontWeight="bold">
+                        Banorte
+                      </Text>
+                      <Icon
+                        as={RiMastercardFill}
+                        w="48px"
+                        h="auto"
+                        color="gray.400"
+                      />
+                    </Flex>
+                    <Spacer />
+                    <Text fontSize="md" fontWeight="bold">
+                      José Manuel Salgado Salgado
+                    </Text>
+                    <br />
+                    <Flex direction="column">
+                      <Box>
+                        <Text
+                          fontSize={{ sm: "xl", lg: "lg", xl: "xl" }}
+                          letterSpacing="2px"
+                          fontWeight="bold"
+                        >
+                          4169 1607 1080 0336
+                        </Text>
+                      </Box>
+                      <Flex mt="14px">
+                        <Flex direction="column" me="34px">
+                          <Text fontSize="xs">GOOD THRU</Text>
+                          <Text fontSize="xs" fontWeight="bold">
+                            11/25
+                          </Text>
+                        </Flex>
+                        <Flex direction="column">
+                          <Text fontSize="xs">CVV</Text>
+                          <Text fontSize="xs" fontWeight="bold">
+                            815
+                          </Text>
+                        </Flex>
+                      </Flex>
+                    </Flex>
+                  </Flex>
+                </CardBody>
+              </Card>
+            </Flex>
+            <br />
+            <Flex
+              direction="column"
+              p="22px"
+              pe={{ sm: "22e", md: "8px", lg: "22px" }}
+              minW={{ sm: "220px", md: "140px", lg: "220px" }}
+              bg="linear-gradient(126.97deg, #060C29 28.26%, rgba(4, 12, 48, 0.5) 91.2%)"
+              borderRadius="20px"
+              mb="20px"
+            >
+              <Text color="gray.400" fontSize="sm" mb="4px">
+                CLABE INTERBANCARIA:
+              </Text>
+              <Text color="#fff" fontSize="lg" fontWeight="bold">
+                XXXX {" - "}XXXX {" - "}XXXX {" - "}XXXX
+              </Text>
+            </Flex>
+            <Flex direction={{ sm: "column", md: "row" }}>
+              <Flex
+                direction="column"
+                me={{ md: "6px", lg: "52px" }}
+                mb={{ sm: "16px", md: "0px" }}
+              >
+                {/* SALDO ACTUAL */}
+                <Card>
+                  <CardBody>
+                    <Flex
+                      flexDirection="row"
+                      align="center"
+                      justify="center"
+                      w="100%"
+                    >
+                      <Stat me="auto">
+                        <StatLabel
+                          fontSize="sm"
+                          color="gray.400"
+                          fontWeight="bold"
+                          pb="2px"
+                        >
+                          Saldo Actual:
+                        </StatLabel>
+                        <Flex>
+                          <StatNumber fontSize="lg" color="#fff">
+                            $5,500
+                          </StatNumber>
+                          <StatHelpText
+                            alignSelf="flex-end"
+                            justifySelf="flex-end"
+                            m="0px"
+                            color="green.400"
+                            fontWeight="bold"
+                            ps="3px"
+                            fontSize="md"
+                          >
+                            +55%
+                          </StatHelpText>
+                        </Flex>
+                      </Stat>
+                      <IconBox as="box" h={"40px"} w={"40px"} bg="brand.200">
+                        <WalletIcon h={"24px"} w={"24px"} color="#fff" />
+                      </IconBox>
+                    </Flex>
+                  </CardBody>
+                </Card>
+              </Flex>
+            </Flex>
+          </Flex>
+        </Card>
+      </Grid>
+
+      <Grid
+        templateColumns={{ sm: "1fr", lg: "1.7fr 1.3fr" }}
+        maxW={{ sm: "350px", md: "100%" }}
+        gap="24px"
+        mb="24px"
+      ></Grid>
+    </Flex>
+  );
 }
-
-export default Profile;

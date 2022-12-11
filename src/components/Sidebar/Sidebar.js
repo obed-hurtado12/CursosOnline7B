@@ -209,7 +209,7 @@ function Sidebar(props) {
           bg='linear-gradient(97.89deg, #FFFFFF 70.67%, rgba(117, 122, 140, 0) 108.55%)'
           bgClip='text'>
           <Text fontSize='sm' letterSpacing='3px' mt='3px' color='transparent'>
-            {logoText}
+            Cursos en Linea
           </Text>
         </Box>
       </Link>
@@ -477,7 +477,7 @@ export function SidebarResponsive(props) {
               <Stack direction='column' mb='40px'>
                 <Box>{links}</Box>
               </Stack>
-              <SidebarHelp></SidebarHelp>
+              {/* <SidebarHelp></SidebarHelp> */}
             </Box>
           </DrawerBody>
         </DrawerContent>

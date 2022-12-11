@@ -15,9 +15,13 @@ import {
   Text,
 } from "@chakra-ui/react";
 // Assets
-import avatar1 from "assets/img/avatars/avatar1.png";
-import avatar2 from "assets/img/avatars/avatar2.png";
-import avatar3 from "assets/img/avatars/avatar3.png";
+import logo1 from "assets/img/Frameworks/LogoReactJs1.png";
+import logo2 from "assets/img/Frameworks/LogoMongoDB4.png";
+import logo3 from "assets/img/Frameworks/LogoNodeJs2.png";
+
+import B1 from "assets/img/Frameworks/B1.png";
+import B2 from "assets/img/Frameworks/B2.png";
+import B3 from "assets/img/Frameworks/B3.png";
 // Custom Icons
 import { ProfileIcon, SettingsIcon } from "components/Icons/Icons";
 // Custom Components
@@ -155,7 +159,7 @@ export default function HeaderLinks(props) {
                 //info='from Alicia'
                 boldInfo='Curso React Native'
                 aName='Fernando Herrera'
-                aSrc={avatar1}
+                aSrc={B1}
               />
             </MenuItem>
             <MenuItem
@@ -176,7 +180,7 @@ export default function HeaderLinks(props) {
                 //info='by Josh Henry'
                 boldInfo='Curso MySQL'
                 aName='Carlos Díaz'
-                aSrc={avatar2}
+                aSrc={B2}
               />
             </MenuItem>
             <MenuItem
@@ -189,13 +193,14 @@ export default function HeaderLinks(props) {
               }}
               _focus={{
                 bg: "transparent",
-              }}>
+              }}
+              >
               <ItemContent
                 time='3 days ago'
                 //info='Pago Realizado Exitosamente!'
                 boldInfo='Curso Spring Boot'
                 aName='Fernando Herrera'
-                aSrc={avatar3}
+                aSrc={B3}
               />
             </MenuItem>
           </Flex>

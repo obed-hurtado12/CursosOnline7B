@@ -1,10 +1,13 @@
 import Dashboard from "views/Dashboard/Dashboard.js";
-import Error404 from "views/Dashboard/Error404.js";
-import Chat from "views/Dashboard/Chat.js";
+import Tables from "views/Dashboard/Tables.js";
+import Billing from "views/Dashboard/Billing.js";
 import RTLPage from "views/RTL/RTLPage.js";
 import Profile from "views/Dashboard/Profile.js";
 import SignIn from "views/Pages/SignIn.js";
 import SignUp from "views/Pages/SignUp.js";
+import ShoppingCart from "views/Dashboard/ShoppingCart.js"
+import Error404 from "views/Dashboard/Error404.js";
+import Chat from "views/Dashboard/Chat.js";
 
 import {
   HomeIcon,
@@ -26,6 +29,38 @@ var dashRoutes = [
     layout: "/admin",
   },
   {
+    path: "/shoppingcart",
+    name: "ShoppingCart",
+    rtlName: "لوحة القيادة",
+    icon: <HomeIcon color='inherit' />,
+    component: ShoppingCart,
+    layout: "/admin",
+  },
+  {
+    path: "/tables",
+    name: "Tables",
+    rtlName: "لوحة القيادة",
+    icon: <StatsIcon color='inherit' />,
+    component: Tables,
+    layout: "/admin",
+  },
+  {
+    path: "/billing",
+    name: "Vista de Pago",
+    rtlName: "لوحة القيادة",
+    icon: <CreditIcon color='inherit' />,
+    component: Billing,
+    layout: "/admin",
+  },
+  {
+    path: "/rtl-support-page",
+    name: "RTL",
+    rtlName: "آرتيإل",
+    icon: <SupportIcon color='inherit' />,
+    component: RTLPage,
+    layout: "/rtl",
+  },
+  {
     path: "/error404",
     name: "Error404",
     rtlName: "لوحة القيادة",
@@ -42,14 +77,6 @@ var dashRoutes = [
     layout: "/admin",
   },
   {
-    path: "/rtl-support-page",
-    name: "RTL",
-    rtlName: "آرتيإل",
-    icon: <SupportIcon color='inherit' />,
-    component: RTLPage,
-    layout: "/rtl",
-  },
-  {
     name: "ACCOUNT PAGES",
     category: "account",
     rtlName: "صفحات",
@@ -57,7 +84,7 @@ var dashRoutes = [
     views: [
       {
         path: "/profile",
-        name: "Profile",
+        name: "Perfil",
         rtlName: "لوحة القيادة",
         icon: <PersonIcon color='inherit' />,
         secondaryNavbar: true,

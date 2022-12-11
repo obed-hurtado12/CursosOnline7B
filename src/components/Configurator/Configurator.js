@@ -1,22 +1,3 @@
-/*!
-
-=========================================================
-* Vision UI Free Chakra - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-chakra
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-chakra/blob/master LICENSE.md)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-// Chakra Imports
 import {
   Box,
   Button,
@@ -64,11 +45,11 @@ export default function Configurator(props) {
           <DrawerHeader pt='24px' px='24px'>
             <DrawerCloseButton color='white' />
             <Text color='white' fontSize='xl' fontWeight='bold' mt='16px'>
-              Vision UI Configurator
+               Inbox Email
             </Text>
-            <Text color='white' fontSize='md' mb='16px'>
+            {/* <Text color='white' fontSize='md' mb='16px'>
               See your dashboard options.
-            </Text>
+            </Text> */}
             <Separator />
           </DrawerHeader>
           <DrawerBody w='340px' ps='24px' pe='40px'>

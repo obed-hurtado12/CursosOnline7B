@@ -118,16 +118,16 @@ export default function AdminNavbar(props) {
           {/* Here we create navbar brand, based on route name */}
           <Link
             color={mainText}
-            href='#'
+            // href='#'
             bg='inherit'
             borderRadius='inherit'
             fontWeight='bold'
             _hover={{ color: { mainText } }}
-            _active={{
-              bg: "inherit",
-              transform: "none",
-              borderColor: "transparent",
-            }}
+            // _active={{
+            //   bg: "inherit",
+            //   transform: "none",
+            //   borderColor: "transparent",
+            // }}
             _focus={{
               boxShadow: "none",
             }}>
@@ -141,7 +141,6 @@ export default function AdminNavbar(props) {
             secondary={props.secondary}
             fixed={props.fixed}
           />
-          
         </Box>
       </Flex>
     </Flex>
