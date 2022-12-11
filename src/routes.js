@@ -17,7 +17,10 @@ import {
   DocumentIcon,
   RocketIcon,
   SupportIcon,
+  CartIcon,
+  ChatIcon,
 } from "components/Icons/Icons";
+import { ProfileIcon } from "components/Icons/Icons";
 
 var dashRoutes = [
   {
@@ -32,7 +35,7 @@ var dashRoutes = [
     path: "/shoppingcart",
     name: "ShoppingCart",
     rtlName: "لوحة القيادة",
-    icon: <HomeIcon color='inherit' />,
+    icon: <CartIcon color='inherit' />,
     component: ShoppingCart,
     layout: "/admin",
   },
@@ -64,7 +67,7 @@ var dashRoutes = [
     path: "/error404",
     name: "Error404",
     rtlName: "لوحة القيادة",
-    icon: <StatsIcon color='inherit' />,
+    icon: <DocumentIcon color='inherit' />,
     component: Error404,
     layout: "/admin",
   },
@@ -72,7 +75,7 @@ var dashRoutes = [
     path: "/chat",
     name: "Chat",
     rtlName: "لوحة القيادة",
-    icon: <CreditIcon color='inherit' />,
+    icon: <ProfileIcon color='inherit' />,
     component: Chat,
     layout: "/admin",
   },
