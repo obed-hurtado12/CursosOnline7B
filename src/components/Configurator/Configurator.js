@@ -45,11 +45,11 @@ export default function Configurator(props) {
           <DrawerHeader pt='24px' px='24px'>
             <DrawerCloseButton color='white' />
             <Text color='white' fontSize='xl' fontWeight='bold' mt='16px'>
-              Vision UI Configurator
+               Inbox Email
             </Text>
-            <Text color='white' fontSize='md' mb='16px'>
+            {/* <Text color='white' fontSize='md' mb='16px'>
               See your dashboard options.
-            </Text>
+            </Text> */}
             <Separator />
           </DrawerHeader>
           <DrawerBody w='340px' ps='24px' pe='40px'>
