@@ -6,6 +6,8 @@ import Profile from "views/Dashboard/Profile.js";
 import SignIn from "views/Pages/SignIn.js";
 import SignUp from "views/Pages/SignUp.js";
 import ShoppingCart from "views/Dashboard/ShoppingCart.js"
+import Error404 from "views/Dashboard/Error404.js";
+import Chat from "views/Dashboard/Chat.js";
 
 import {
   HomeIcon,
@@ -57,6 +59,22 @@ var dashRoutes = [
     icon: <SupportIcon color='inherit' />,
     component: RTLPage,
     layout: "/rtl",
+  },
+  {
+    path: "/error404",
+    name: "Error404",
+    rtlName: "لوحة القيادة",
+    icon: <StatsIcon color='inherit' />,
+    component: Error404,
+    layout: "/admin",
+  },
+  {
+    path: "/chat",
+    name: "Chat",
+    rtlName: "لوحة القيادة",
+    icon: <CreditIcon color='inherit' />,
+    component: Chat,
+    layout: "/admin",
   },
   {
     name: "ACCOUNT PAGES",
