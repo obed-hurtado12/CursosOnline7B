@@ -84,12 +84,16 @@ export const barChartOptionsDashboard = {
 
 export const lineChartDataDashboard = [
   {
-    name: "Mobile apps",
+    name: "React JS",
     data: [500, 250, 300, 220, 500, 250, 300, 230, 300, 350, 250, 400],
   },
   {
-    name: "Websites",
+    name: "Node JS",
     data: [200, 230, 300, 350, 370, 420, 550, 350, 400, 500, 330, 550],
+  },
+  {
+    name: "MongoDB",
+    data: [100, 300, 50, 400, 600, 400, 650, 100, 120, 70, 341, 200],
   },
 ];
 
@@ -164,9 +168,9 @@ export const lineChartOptionsDashboard = {
       opacityTo: 0,
       stops: [],
     },
-    colors: ["#2CD9FF", "#582CFF"],
+    colors: ["#2CD9FF", "#582CFF","#3CFF2C"],
   },
-  colors: ["#2CD9FF", "#582CFF"],
+  colors: ["#2CD9FF", "#582CFF","#3CFF2C"],
 };
 
 export const lineChartDataProfile1 = [
@@ -344,4 +348,89 @@ export const lineChartOptionsProfile2 = {
     colors: ["#582CFF"],
   },
   colors: ["#582CFF"],
+};
+
+export const lineChartData = [
+  {
+    name: "Mobile apps",
+    data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+  },
+  {
+    name: "Websites",
+    data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
+  },
+];
+
+export const lineChartOptions = {
+  chart: {
+    toolbar: {
+      show: false,
+    },
+  },
+  tooltip: {
+    theme: "dark",
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    curve: "smooth",
+  },
+  xaxis: {
+    type: "datetime",
+    categories: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
+    axisTicks: {
+      show: false
+    },
+    axisBorder: {
+      show: false,
+    },
+    labels: {
+      style: {
+        colors: "#fff",
+        fontSize: "12px",
+      },
+    },
+  },
+  yaxis: {
+    labels: {
+      style: {
+        colors: "#fff",
+        fontSize: "12px",
+      },
+    },
+  },
+  legend: {
+    show: false,
+  },
+  grid: {
+    strokeDashArray: 5,
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      shade: "light",
+      type: "vertical",
+      shadeIntensity: 0.5,
+      inverseColors: true,
+      opacityFrom: 0.8,
+      opacityTo: 0,
+      stops: [],
+    },
+    colors: ["#fff", "#3182CE"],
+  },
+  colors: ["#fff", "#3182CE"],
 };

@@ -32,28 +32,28 @@ import { SiDropbox } from "react-icons/si";
 export const dashboardTableData = [
   {
     logo: AdobexdLogo,
-    name: "Chakra Soft UI Version",
+    name: "React JS",
     members: [avatar1, avatar2, avatar3, avatar4, avatar5],
     budget: "$14,000",
     progression: 60,
   },
   {
     logo: AtlassianLogo,
-    name: "Add Progress Track",
+    name: "Node JS",
     members: [avatar3, avatar2],
     budget: "$3,000",
     progression: 10,
   },
   {
     logo: SlackLogo,
-    name: "Fix Platform Errors",
+    name: "MongoDB",
     members: [avatar10, avatar4],
     budget: "Not set",
     progression: 100,
   },
   {
     logo: SpotifyLogo,
-    name: "Launch our Mobile App",
+    name: "HTML5",
     members: [avatar2, avatar3, avatar7, avatar8],
     budget: "$32,000",
     progression: 100,

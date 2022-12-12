@@ -1,7 +1,6 @@
 import Dashboard from "views/Dashboard/Dashboard.js";
 import Tables from "views/Dashboard/Tables.js";
 import Billing from "views/Dashboard/Billing.js";
-import RTLPage from "views/RTL/RTLPage.js";
 import Profile from "views/Dashboard/Profile.js";
 import SignIn from "views/Pages/SignIn.js";
 import SignUp from "views/Pages/SignUp.js";
@@ -10,6 +9,7 @@ import Error404 from "views/Dashboard/Error404.js";
 import Chat from "views/Dashboard/Chat.js";
 import Error500 from "views/Dashboard/Error500";
 import Error502 from "views/Dashboard/Error502";
+import Dashboard2 from "views/Dashboard/Dashboard2";
 
 import {
   HomeIcon,
@@ -26,17 +26,25 @@ import { ProfileIcon } from "components/Icons/Icons";
 
 var dashRoutes = [
   {
+    path: "/dashboard",
+    name: "Dashboard",
+    rtlName: "Dashboard",
+    icon: <HomeIcon color='inherit' />,
+    component: Dashboard2,
+    layout: "/admin",
+  },
+  {
     path: "/landing",
     name: "Landing",
-    rtlName: "لوحة القيادة",
-    icon: <HomeIcon color='inherit' />,
+    rtlName: "Landing",
+    icon: <SupportIcon color='inherit' />,
     component: Dashboard,
     layout: "/admin",
   },
   {
     path: "/shoppingcart",
     name: "ShoppingCart",
-    rtlName: "لوحة القيادة",
+    rtlName: "ShoppingCart",
     icon: <CartIcon color='inherit' />,
     component: ShoppingCart,
     layout: "/admin",
@@ -44,7 +52,7 @@ var dashRoutes = [
   {
     path: "/tables",
     name: "Tables",
-    rtlName: "لوحة القيادة",
+    rtlName: "Tables",
     icon: <StatsIcon color='inherit' />,
     component: Tables,
     layout: "/admin",
@@ -52,23 +60,15 @@ var dashRoutes = [
   {
     path: "/billing",
     name: "Vista de Pago",
-    rtlName: "لوحة القيادة",
+    rtlName: "Vista de Pago",
     icon: <CreditIcon color='inherit' />,
     component: Billing,
     layout: "/admin",
   },
   {
-    path: "/rtl-support-page",
-    name: "RTL",
-    rtlName: "آرتيإل",
-    icon: <SupportIcon color='inherit' />,
-    component: RTLPage,
-    layout: "/rtl",
-  },
-  {
     path: "/error404",
     name: "Error 404",
-    rtlName: "لوحة القيادة",
+    rtlName: "Error 404",
     icon: <DocumentIcon color='inherit' />,
     component: Error404,
     layout: "/admin",
@@ -76,7 +76,7 @@ var dashRoutes = [
   {
     path: "/error500",
     name: "Error 500",
-    rtlName: "لوحة القيادة",
+    rtlName: "Error 500",
     icon: <DocumentIcon color='inherit' />,
     component: Error500,
     layout: "/admin",
@@ -84,7 +84,7 @@ var dashRoutes = [
   {
     path: "/error502",
     name: "Error 502",
-    rtlName: "لوحة القيادة",
+    rtlName: "Error 502",
     icon: <DocumentIcon color='inherit' />,
     component: Error502,
     layout: "/admin",
@@ -92,7 +92,7 @@ var dashRoutes = [
   {
     path: "/chat",
     name: "Chat",
-    rtlName: "لوحة القيادة",
+    rtlName: "Chat",
     icon: <ProfileIcon color='inherit' />,
     component: Chat,
     layout: "/admin",
@@ -100,13 +100,13 @@ var dashRoutes = [
   {
     name: "ACCOUNT PAGES",
     category: "account",
-    rtlName: "صفحات",
+    rtlName: "ACCOUNT PAGES",
     state: "pageCollapse",
     views: [
       {
         path: "/profile",
         name: "Perfil",
-        rtlName: "لوحة القيادة",
+        rtlName: "Perfil",
         icon: <PersonIcon color='inherit' />,
         secondaryNavbar: true,
         component: Profile,
@@ -115,7 +115,7 @@ var dashRoutes = [
       {
         path: "/signin",
         name: "Iniciar Sesión",
-        rtlName: "لوحة القيادة",
+        rtlName: "Iniciar Sesión",
         icon: <DocumentIcon color='inherit' />,
         component: SignIn,
         layout: "/auth",
@@ -123,7 +123,7 @@ var dashRoutes = [
       {
         path: "/signup",
         name: "Registrarse",
-        rtlName: "لوحة القيادة",
+        rtlName: "Registrarse",
         icon: <RocketIcon color='inherit' />,
         secondaryNavbar: true,
         component: SignUp,
