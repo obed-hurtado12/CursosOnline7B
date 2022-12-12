@@ -8,6 +8,7 @@ import SignUp from "views/Pages/SignUp.js";
 import ShoppingCart from "views/Dashboard/ShoppingCart.js"
 import Error404 from "views/Dashboard/Error404.js";
 import Chat from "views/Dashboard/Chat.js";
+import Wizard from "views/Dashboard/Wizard.js";
 
 import {
   HomeIcon,
@@ -17,6 +18,7 @@ import {
   DocumentIcon,
   RocketIcon,
   SupportIcon,
+  
 } from "components/Icons/Icons";
 
 var dashRoutes = [
@@ -74,6 +76,14 @@ var dashRoutes = [
     rtlName: "لوحة القيادة",
     icon: <CreditIcon color='inherit' />,
     component: Chat,
+    layout: "/admin",
+  },
+  {
+    path: "/wizard",
+    name: "Wizard",
+    rtlName: "لوحة القيادة",
+    icon: <SupportIcon color='inherit' />,
+    component: Wizard,
     layout: "/admin",
   },
   {
