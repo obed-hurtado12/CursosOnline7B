@@ -7,6 +7,10 @@ import SignIn from "views/Pages/SignIn.js";
 import SignUp from "views/Pages/SignUp.js";
 import ShoppingCart from "views/Dashboard/ShoppingCart.js"
 import Detail from "views/Dashboard/Detail";
+import Pricing from "views/Dashboard/Pricing";
+import Charts from "views/Dashboard/Charts"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash, faTag } from '@fortawesome/free-solid-svg-icons'
 
 import {
   HomeIcon,
@@ -28,11 +32,27 @@ var dashRoutes = [
     layout: "/admin",
   },
   {
+    path: "/pricing",
+    name: "Pricing",
+    rtlName: "لوحة القيادة",
+    icon: <FontAwesomeIcon icon={faTag} color='inherit'/>,
+    component: Pricing,
+    layout: "/admin",
+  },
+  {
     path: "/tables",
     name: "Tables",
     rtlName: "لوحة القيادة",
     icon: <StatsIcon color='inherit' />,
     component: Tables,
+    layout: "/admin",
+  },
+  {
+    path: "/charts",
+    name: "Charts",
+    rtlName: "لوحة القيادة",
+    icon: <StatsIcon color='inherit' />,
+    component: Charts,
     layout: "/admin",
   },
   {
@@ -45,7 +65,7 @@ var dashRoutes = [
   },
   {
     path: "/shoppingcart",
-    name: "ShoppingCart",
+    name: "Checkout",
     rtlName: "لوحة القيادة",
     icon: <HomeIcon color='inherit' />,
     component: ShoppingCart,
@@ -58,6 +78,14 @@ var dashRoutes = [
     icon: <CreditIcon color='inherit' />,
     component: Billing,
     layout: "/admin",
+  },
+  {
+    path: "/charts",
+    name: "Charts",
+    rtlName: "آرتيإل",
+    icon: <SupportIcon color='inherit' />,
+    component: Charts,
+    layout: "/charts",
   },
   {
     path: "/rtl-support-page",
