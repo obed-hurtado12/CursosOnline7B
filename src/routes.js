@@ -8,6 +8,8 @@ import SignUp from "views/Pages/SignUp.js";
 import ShoppingCart from "views/Dashboard/ShoppingCart.js"
 import Error404 from "views/Dashboard/Error404.js";
 import Chat from "views/Dashboard/Chat.js";
+import Error500 from "views/Dashboard/Error500";
+import Error502 from "views/Dashboard/Error502";
 
 import {
   HomeIcon,
@@ -65,10 +67,26 @@ var dashRoutes = [
   },
   {
     path: "/error404",
-    name: "Error404",
+    name: "Error 404",
     rtlName: "لوحة القيادة",
     icon: <DocumentIcon color='inherit' />,
     component: Error404,
+    layout: "/admin",
+  },
+  {
+    path: "/error500",
+    name: "Error 500",
+    rtlName: "لوحة القيادة",
+    icon: <DocumentIcon color='inherit' />,
+    component: Error500,
+    layout: "/admin",
+  },
+  {
+    path: "/error502",
+    name: "Error 502",
+    rtlName: "لوحة القيادة",
+    icon: <DocumentIcon color='inherit' />,
+    component: Error502,
     layout: "/admin",
   },
   {

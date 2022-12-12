@@ -51,6 +51,16 @@ body {
 .notfound p {
   font-family: "Josefin Sans", sans-serif;
   color: #c9c9c9;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 15px;
+
+}
+
+#texto{
+  font-family: "Josefin Sans", sans-serif;
+  color: #c9c9c9;
   font-size: 16px;
   font-weight: 400;
   margin-top: 0px;

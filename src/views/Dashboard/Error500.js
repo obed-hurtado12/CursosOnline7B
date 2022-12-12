@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import "./error404.css";
 
-export default class Error404 extends Component {
+export default class Error500 extends Component {
   render() {
     return (
       <div id="notfound">
         <div class="notfound">
           <div class="notfound-404">
             <h1>
-              4<span>0</span>4
+              5<span>0</span>0
             </h1>
           </div>
           <p>
-            Woops! ¡Pagina No Encontrada!
+            Woops! ¡Algo salió mal!
           </p>
-          <p id="texto">
-          Es posible que la página que está buscando haya sido eliminada debido a un cambio de nombre o no esté disponible temporalmente.
+          <p  id="texto">
+          ¿Has probado a apagarlo y encenderlo de nuevo?
           </p>
           <a href="#">Volver</a>
         </div>
