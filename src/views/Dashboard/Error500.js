@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "./error404.css";
+import error from "../../assets/img/Error/500.png";
 
 export default class Error500 extends Component {
   render() {
     return (
       <div id="notfound">
+        <img src={error} />
         <div class="notfound">
           <div class="notfound-404">
             <h1>
