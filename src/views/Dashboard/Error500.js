@@ -6,7 +6,7 @@ export default class Error500 extends Component {
   render() {
     return (
       <div id="notfound">
-        <img src={error} />
+        <img id="error" src={error} />
         <div class="notfound">
           <div class="notfound-404">
             <h1>
